@@ -88,6 +88,24 @@ class Templates
         climate[] = {"arid"};
     };
 
+    class Vanilla_CTRG : Vanilla_Base{ 
+        side = "Occ";
+        name = "A3 NATO (UK)";
+        flagTexture = "\A3\Data_F\Flags\flag_uk_CO.paa";
+        file = "Vanilla_AI_CTRG";
+        forceDLC[] = {"expansion"};
+        maps[] = {"tanoa"};
+        climate[] = {"temperate","tropical"};
+    };
+	
+    class Vanilla_ION : Vanilla_Base{ 
+        side = "Occ";
+        name = "A3 ION PMC";
+        flagTexture = "\A3\Data_F\Flags\flag_ion_CO.paa";
+        file = "Vanilla_AI_ION";
+        forceDLC[] = {"expansion"};
+    };
+	
     class Vanilla_FIA : Vanilla_Base
     {
         side = "Reb";
