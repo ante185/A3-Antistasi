@@ -13,27 +13,25 @@ class O_Truck_02_transport_F;
 class O_Truck_02_covered_F;	
 class O_Truck_02_medical_F;	
 
-//these are so far all the vanilla vehicles that have an alternative black texture, that i've found
-
 class a3a_ION_LSV_02_AT_F	:	O_LSV_02_AT_F
 {
-
+	textureList[] = {"Black",1,"GreenHex",0,"Arid",0};
 };
 class a3a_ION_LSV_01_AT_F	:	B_LSV_01_AT_F
 {
-
+	textureList[] = {"Black",1,"Olive",0,"Sand",0};
 };
 class a3a_ION_Offroad_02_unarmed_F	:	I_C_Offroad_02_unarmed_F
 {
-
+	textureList[] = {"Black",1,"Blue",0,"Green",0,"Orange",0,"Red",0,"White",0,"Brown",0,"Olive",0,"IDAP",0};
 };
 class a3a_ION_Offroad_02_AT_F	:	I_C_Offroad_02_AT_F
 {
-
+	textureList[] = {"Black",1,"Blue",0,"Green",0,"Orange",0,"Red",0,"White",0,"Brown",0,"Olive",0,"IDAP",0};
 };
 class a3a_ION_Offroad_02_LMG_F	:	I_C_Offroad_02_LMG_F
 {
-
+	textureList[] = {"Black",1,"Blue",0,"Green",0,"Orange",0,"Red",0,"White",0,"Brown",0,"Olive",0,"IDAP",0};
 };
 class a3a_ION_MBT_04_cannon_F	:	O_MBT_04_cannon_F
 {
