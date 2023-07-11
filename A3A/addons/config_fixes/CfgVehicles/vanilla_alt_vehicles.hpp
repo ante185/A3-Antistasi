@@ -176,10 +176,10 @@ class a3a_Heli_light_03_dynamicLoadout_green_F	:	I_Heli_light_03_dynamicLoadout_
 { 
 	hiddenSelectionsTextures[] = {"a3\air_f_epb\heli_light_03\data\heli_light_03_base_co.paa","a3\weapons_f\ammoboxes\data\ammobox_co.paa","a3\weapons_f\ammoboxes\data\ammobox_signs_ca.paa"};
 };
-class a3a_APC_Wheeled_03_cannon_tan_F	:	I_APC_Wheeled_03_cannon_F
+class a3a_APC_Wheeled_03_cannon_blufor_F	:	I_APC_Wheeled_03_cannon_F
 {
 	textureList[] = {"Guerilla_02",1,"Guerilla_01",0,"Guerilla_03",0,"Indep",0};
-	hiddenSelectionsTextures[] = {"a3\data_f_tacops\data\apc_wheeled_03_ext_ig_02_co.paa","a3\data_f_tacops\data\apc_wheeled_03_ext2_ig_02_co.paa","a3\data_f_tacops\data\rcws30_ig_02_co.paa","a3\data_f_tacops\data\apc_wheeled_03_ext_alpha_ig_02_co.paa","a3\armor_f\data\camonet_aaf_fia_desert_co.paa","a3\armor_f\data\cage_sand_co.paa"};
+	hiddenSelectionsTextures[] = {"a3\data_f_gamma\data\APC_Wheeled_03_Ext_CO.paa","a3\data_f_gamma\data\APC_Wheeled_03_Ext2_CO.paa","a3\data_f_gamma\data\RCWS30_CO.paa","a3\data_f_gamma\data\APC_Wheeled_03_Ext_alpha_CO.paa","a3\armor_f\data\camonet_aaf_fia_desert_co.paa","a3\armor_f\data\cage_sand_co.paa"};
 };
 
 class a3a_Plane_Fighter_04_grey_F : I_Plane_Fighter_04_F

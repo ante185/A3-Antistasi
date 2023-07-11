@@ -27,14 +27,14 @@
 ["vehiclesFuelTrucks", ["a3a_ION_Truck_02_Fuel_F"]] call _fnc_saveToTemplate;
 ["vehiclesMedical", ["a3a_ION_Truck_02_medical_F"]] call _fnc_saveToTemplate;
 ["vehiclesLightAPCs", []] call _fnc_saveToTemplate;
-private _APCs = ["a3a_APC_Wheeled_03_cannon_tan_F","a3a_APC_Wheeled_03_cannon_tan_F","B_APC_Wheeled_01_cannon_F", "B_APC_Tracked_01_rcws_F"];           // CRV has no cargo: "B_T_APC_Tracked_01_CRV_F"
+private _APCs = ["a3a_APC_Wheeled_03_cannon_blufor_F","a3a_APC_Wheeled_03_cannon_blufor_F","B_APC_Wheeled_01_cannon_F", "B_APC_Tracked_01_rcws_F"];           // CRV has no cargo: "B_T_APC_Tracked_01_CRV_F"
 ["vehiclesIFVs", []] call _fnc_saveToTemplate;
 private _Tanks = ["B_MBT_01_TUSK_F", "B_MBT_01_cannon_F"];
 ["vehiclesAA", ["B_APC_Tracked_01_AA_F"]] call _fnc_saveToTemplate;
 
 ["vehiclesTransportBoats", ["B_Boat_Transport_01_F"]] call _fnc_saveToTemplate;
 ["vehiclesGunBoats", ["B_Boat_Armed_01_minigun_F", "a3a_Boat_Armed_01_hmg_black_F"]] call _fnc_saveToTemplate;
-["vehiclesAmphibious", ["a3a_APC_Wheeled_03_cannon_tan_F"]] call _fnc_saveToTemplate;
+["vehiclesAmphibious", ["a3a_APC_Wheeled_03_cannon_blufor_F"]] call _fnc_saveToTemplate;
 
 ["vehiclesPlanesCAS", ["a3a_Plane_Fighter_03_dynamicLoadout_grey_F"]] call _fnc_saveToTemplate;
 ["vehiclesPlanesAA", ["a3a_Plane_Fighter_04_grey_F"]] call _fnc_saveToTemplate;
