@@ -21,8 +21,8 @@ class Templates
     };
     class Vanilla_CSAT_Temperate : Vanilla_CSAT_Arid
     {
-        name = "A3 CSAT Temperate";
-        file = "Vanilla_AI_CSAT_Enoch";
+        name = "A3 CSAT Temperate/Tropical";
+        file = "Vanilla_AI_CSAT_Temperate";
         climate[] = {"temperate","tropical"};
     };
     class Vanilla_CSAT_Apex : Vanilla_CSAT_Arid
