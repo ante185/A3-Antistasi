@@ -687,7 +687,7 @@ private _machineGunnerTemplate = {
     ["primary", 4] call _fnc_addMagazines;
 
     ["sidearms"] call _fnc_setHandgun;
-    ["handgun", 2] call _fnc_addMagazines;
+    ["handgun", 4] call _fnc_addMagazines;
 
     ["items_medical_standard"] call _fnc_addItemSet;
     ["items_machineGunner_extras"] call _fnc_addItemSet;
