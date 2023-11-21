@@ -239,13 +239,18 @@ _sfLoadoutData set ["slRifles", [
 ["arifle_AK12_GL_lush_F", "muzzle_snds_B_lush_F", "acc_pointer_IR", "optic_Arco", ["30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_Tracer_F"], ["1Rnd_HE_Grenade_shell", "1Rnd_HE_Grenade_shell", "1Rnd_Smoke_Grenade_shell"], ""]
 ]];
 _sfLoadoutData set ["rifles", [
-["arifle_AK12_lush_F", "muzzle_snds_B_lush_F", "acc_pointer_IR", "optic_Holosight_blk_F", ["30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_Tracer_F"], [], ""]
+["arifle_AK12_lush_F", "muzzle_snds_B_lush_F", "acc_pointer_IR", "optic_Holosight_blk_F", ["30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_Tracer_F"], [], ""],
+["arifle_AK12_lush_F", "muzzle_snds_B_lush_F", "acc_pointer_IR", "optic_Holosight_lush_F", ["30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_Tracer_F"], [], ""]
 ]];
 _sfLoadoutData set ["carbines", [
-["arifle_AK12U_lush_F", "muzzle_snds_B_lush_F", "acc_pointer_IR", "optic_Holosight_blk_F", ["30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_Tracer_F"], [], ""]
+["arifle_AK12U_lush_F", "muzzle_snds_B_lush_F", "acc_pointer_IR", "optic_Holosight_blk_F", ["30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_Tracer_F"], [], ""],
+["arifle_AK12U_lush_F", "muzzle_snds_B_lush_F", "acc_pointer_IR", "optic_Holosight_blk_F", ["30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_Tracer_F"], [], ""],
+["arifle_AK12U_lush_F", "muzzle_snds_B_lush_F", "acc_pointer_IR", "optic_Holosight_lush_F", ["30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_Tracer_F"], [], ""],
+["arifle_AK12U_lush_F", "muzzle_snds_B_lush_F", "acc_pointer_IR", "optic_Holosight_lush_F", ["30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_Tracer_F"], [], ""]
 ]];
 _sfLoadoutData set ["grenadeLaunchers", [
-["arifle_AK12_GL_lush_F", "muzzle_snds_B_lush_F", "acc_pointer_IR", "optic_Holosight_blk_F", ["30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_Tracer_F"], ["1Rnd_HE_Grenade_shell", "1Rnd_HE_Grenade_shell", "1Rnd_Smoke_Grenade_shell"], ""]
+["arifle_AK12_GL_lush_F", "muzzle_snds_B_lush_F", "acc_pointer_IR", "optic_Holosight_blk_F", ["30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_Tracer_F"], ["1Rnd_HE_Grenade_shell", "1Rnd_HE_Grenade_shell", "1Rnd_Smoke_Grenade_shell"], ""],
+["arifle_AK12_GL_lush_F", "muzzle_snds_B_lush_F", "acc_pointer_IR", "optic_Holosight_lush_F", ["30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_F", "30rnd_762x39_AK12_Lush_Mag_Tracer_F"], ["1Rnd_HE_Grenade_shell", "1Rnd_HE_Grenade_shell", "1Rnd_Smoke_Grenade_shell"], ""]
 ]];
 _sfLoadoutData set ["machineGuns", [
 ["LMG_Zafir_F", "", "acc_pointer_IR", "optic_Holosight_blk_F", ["150Rnd_762x54_Box", "150Rnd_762x54_Box_Tracer"], [], ""],
@@ -408,8 +413,13 @@ private _officerLoadoutData = _militaryLoadoutData call _fnc_copyLoadoutData;
 _officerLoadoutData set ["uniforms", ["U_O_ParadeUniform_01_CSAT_F", "U_O_ParadeUniform_01_CSAT_decorated_F"]];
 _officerLoadoutData set ["Hvests", ["V_TacVest_blk", "V_LegStrapBag_black_F"]];
 _officerLoadoutData set ["slHat", ["H_ParadeDressCap_01_CSAT_F", "H_Beret_CSAT_01_F"]];
+_officerLoadoutData set ["slBackpacks", []];
+_officerLoadoutData set ["backpacks", []];
 _officerLoadoutData set ["slRifles", [
 ["arifle_AK12U_F", "", "", "", ["30Rnd_762x39_Mag_F", "30Rnd_762x39_Mag_F", "30Rnd_762x39_Mag_Tracer_F"], [], ""]
+]];
+_officerLoadoutData set ["sidearms", [
+["hgun_Pistol_heavy_02_F", "", "", "optic_Yorris", [], [], ""]
 ]];
 
 
@@ -418,21 +428,25 @@ if ("mark" in A3A_enabledDLC) then {
     ["MMG_01_hex_F", "muzzle_snds_93mmg", "acc_pointer_IR", "optic_Arco", [], [], "bipod_02_F_hex"],
     ["MMG_01_hex_F", "muzzle_snds_93mmg", "acc_pointer_IR", "optic_MRCO", [], [], "bipod_02_F_hex"]
     ];
+    (_sfLoadoutData get "carbines") append [
+    ["srifle_DMR_04_F", "", "acc_pointer_IR", "optic_ACO_grn_smg", [], [], ""]
+    ];
     (_sfLoadoutData get "marksmanRifles") append [
-    ["srifle_DMR_04_F", "", "acc_pointer_IR", "optic_Arco_blk_F", [], [], "bipod_02_F_hex"],
-    ["srifle_DMR_04_F", "", "acc_pointer_IR", "optic_DMS", [], [], "bipod_02_F_hex"]
+    ["srifle_DMR_04_F", "", "acc_pointer_IR", "optic_Arco_blk_F", [], [], "bipod_02_F_blk"],
+    ["srifle_DMR_04_F", "", "acc_pointer_IR", "optic_DMS", [], [], "bipod_02_F_blk"]
     ];
     (_sfLoadoutData get "sniperRifles") append [
-    ["srifle_DMR_05_blk_F", "muzzle_snds_93mmg", "acc_pointer_IR", "optic_KHS_blk", [], [], "bipod_02_F_hex"],
-    ["srifle_DMR_05_blk_F", "muzzle_snds_93mmg", "acc_pointer_IR", "optic_LRPS", [], [], "bipod_02_F_hex"]
+    ["srifle_DMR_05_blk_F", "muzzle_snds_93mmg", "acc_pointer_IR", "optic_KHS_blk", [], [], "bipod_02_F_blk"],
+    ["srifle_DMR_05_blk_F", "muzzle_snds_93mmg", "acc_pointer_IR", "optic_LRPS", [], [], "bipod_02_F_blk"],
+    ["srifle_DMR_04_F", "", "acc_pointer_IR", "optic_DMS", [], [], "bipod_02_F_blk"]
     ];
     
     (_militaryLoadoutData get "machineGuns") append [
     ["MMG_01_hex_F", "", "acc_pointer_IR", "optic_Arco", [], [], "bipod_02_F_hex"],
     ["MMG_01_hex_F", "", "acc_pointer_IR", "optic_MRCO", [], [], "bipod_02_F_hex"]];
     (_militaryLoadoutData get "sniperRifles") append [
-    ["srifle_DMR_05_blk_F", "", "acc_pointer_IR", "optic_KHS_blk", [], [], "bipod_02_F_hex"],
-    ["srifle_DMR_05_blk_F", "", "acc_pointer_IR", "optic_LRPS", [], [], "bipod_02_F_hex"]
+    ["srifle_DMR_05_blk_F", "", "acc_pointer_IR", "optic_KHS_blk", [], [], "bipod_02_F_blk"],
+    ["srifle_DMR_05_blk_F", "", "acc_pointer_IR", "optic_LRPS", [], [], "bipod_02_F_blk"]
     ];
 };
 
