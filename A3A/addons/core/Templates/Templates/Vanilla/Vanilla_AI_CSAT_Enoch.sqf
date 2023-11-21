@@ -344,6 +344,10 @@ _militiaLoadoutData set ["glVests", ["V_HarnessOGL_ghex_F"]];
 _militiaLoadoutData set ["Hvests", ["V_TacVest_oli"]];
 _militiaLoadoutData set ["backpacks", ["B_FieldPack_taiga_F", "B_FieldPack_green_F"]];
 _militiaLoadoutData set ["helmets", ["H_MilCap_taiga"]];
+
+(_militiaLoadoutData get "lightATLaunchers") append [
+"launch_RPG7_F","launch_RPG7_F"
+];
 _militiaLoadoutData set ["rifles", [
 ["arifle_AK12_F", "", "acc_flashlight", "", ["30Rnd_762x39_Mag_F", "30Rnd_762x39_Mag_F", "30Rnd_762x39_Mag_Tracer_F"], [], ""],
 ["arifle_AKM_FL_F", "", "", "", ["30Rnd_762x39_Mag_F", "30Rnd_762x39_Mag_F", "30Rnd_762x39_Mag_Tracer_F"], [], ""]
@@ -396,11 +400,6 @@ _pilotLoadoutData set ["carbines", [
 ["arifle_AKS_F", "", "", "", ["30Rnd_545x39_Mag_F", "30Rnd_545x39_Mag_F", "30Rnd_545x39_Mag_Tracer_F"], [], ""]
 ]];
 
-if ("expansion" in A3A_enabledDLC) then {
-    (_militiaLoadoutData get "lightATLaunchers") append [
-    "launch_RPG7_F","launch_RPG7_F"
-    ];
-};
 
 if ("mark" in A3A_enabledDLC) then {
     (_sfLoadoutData get "machineGuns") append [
