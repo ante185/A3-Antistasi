@@ -56,7 +56,7 @@ private _Tanks = ["O_T_MBT_02_cannon_ghex_F"];
 //Config special vehicles - militia vehicles are mostly used in the early game, police cars are being used by troops around cities -- Example:
 private _vehiclesMilitiaLightArmed = ["a3a_Offroad_01_green_armed_F", "a3a_Offroad_01_green_AT_F"];
 ["vehiclesMilitiaTrucks", ["O_Truck_02_transport_F", "O_Truck_02_covered_F", "O_Truck_03_covered_F", "O_Truck_03_transport_F"]] call _fnc_saveToTemplate;
-private _vehiclesMilitiaCars = ["a3a_Offroad_01_tan_F"];
+private _vehiclesMilitiaCars = ["a3a_Offroad_01_green_F"];
 
 private _vehiclesPolice = ["B_GEN_Offroad_01_gen_F"];
 
