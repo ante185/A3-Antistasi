@@ -42,9 +42,9 @@ if (_base in seaports) then {
 			_typeCar = selectRandom (_faction get "vehiclesHelisLight");
 			_typePatrol = "AIR";
 		};
-		_typeCar = selectRandom ((_faction get "vehiclesLightArmed") + (_faction get "vehiclesLightUnarmed"));
+		_typeCar = selectRandom (selectRandom [(_faction get "vehiclesLightArmed"), (_faction get "vehiclesLightUnarmed")]);
 	} else {
-		_typeCar = selectRandom ((_faction get "vehiclesPolice") + (_faction get "vehiclesMilitiaLightArmed"));
+		_typeCar = selectRandom (selectRandomWeighted[(_faction get "vehiclesPolice"), 1, (_faction get "vehiclesMilitiaCars"), 1, (_faction get "vehiclesMilitiaLightArmed"), 2]);
 	};
 };
 
@@ -111,11 +111,29 @@ _groups = _groups + [_groupVeh];
 _vehiclesX = _vehiclesX + [_veh];
 
 
-if (_typeCar in (_faction get "vehiclesLightUnarmed")) then
+if ((_veh emptyPositions "Cargo") >= 1 ) then
 	{
+    private _freeCargo = _veh emptyPositions "Cargo";
+    private _passangers = min(_freeCargo, 2);
+    private _groupType = [];
+    private _unitType = _faction get "unitGrunt";
+    
+    if (_typeCar in (_faction get "vehiclesPolice")) then{
+        _unitType = _faction get "unitPoliceGrunt"; 
+    }   
+    else{
+        if (_typeCar in ((_faction get "vehiclesMilitiaLightArmed") + (_faction get "vehiclesMilitiaCars"))) then{
+            _unitType = _faction get "unitMilitiaGrunt"; 
+        };
+    };
+    
+    for "_i" from 0 to (_passangers - 1) do {
+        _groupType pushback  _unitType;
+    }; 
+    
 	sleep 1;
-	_groupX = [_posbase, _sideX, _faction get "groupSentry"] call A3A_fnc_spawnGroup;
-	{_x assignAsCargo _veh;_x moveInCargo _veh; _soldiers pushBack _x; [_x] joinSilent _groupVeh; [_x,"",false] call A3A_fnc_NATOinit} forEach units _groupX;
+	_groupX = [_posbase, _sideX, _groupType] call A3A_fnc_spawnGroup;
+	{_x assignAsCargo _veh;_x moveInCargo [_veh, _forEachIndex + min(2, _freeCargo)]; _soldiers pushBack _x; [_x] joinSilent _groupVeh; [_x,"",false] call A3A_fnc_NATOinit} forEach units _groupX;
 	deleteGroup _groupX;
 	};
 
