@@ -42,9 +42,13 @@ if (_base in seaports) then {
 			_typeCar = selectRandom (_faction get "vehiclesHelisLight");
 			_typePatrol = "AIR";
 		};
-		_typeCar = selectRandom (selectRandom [(_faction get "vehiclesLightArmed"), (_faction get "vehiclesLightUnarmed")]);
+        if ( _sideX isEqualTo Invaders) then {
+            _typeCar = selectRandom (selectRandomWeighted [(_faction get "vehiclesLightArmed"), 1, (_faction get "vehiclesLightUnarmed"), aggressionInvaders]);
+        } else{
+            _typeCar = selectRandom (selectRandomWeighted [(_faction get "vehiclesLightArmed"), 1, (_faction get "vehiclesLightUnarmed"), aggressionOccupants]);
+        };
 	} else {
-		_typeCar = selectRandom (selectRandomWeighted[(_faction get "vehiclesPolice"), 1, (_faction get "vehiclesMilitiaCars"), 1, (_faction get "vehiclesMilitiaLightArmed"), 2]);
+		_typeCar = selectRandom (selectRandomWeighted[(_faction get "vehiclesPolice"), 1 max (5 - tierWar), (_faction get "vehiclesMilitiaCars"), tierWar + aggressionOccupants/5, (_faction get "vehiclesMilitiaLightArmed"), tierWar + aggressionOccupants - 1]);
 	};
 };
 
@@ -111,31 +115,38 @@ _groups = _groups + [_groupVeh];
 _vehiclesX = _vehiclesX + [_veh];
 
 
-if ((_veh emptyPositions "Cargo") >= 1 ) then
-	{
+if ((_veh emptyPositions "Cargo") > 0) then
+{
     private _freeCargo = _veh emptyPositions "Cargo";
-    private _passangers = min(_freeCargo, 2);
+    private _maxPassangers = 2;
     private _groupType = [];
     private _unitType = _faction get "unitGrunt";
-    
-    if (_typeCar in (_faction get "vehiclesPolice")) then{
-        _unitType = _faction get "unitPoliceGrunt"; 
-    }   
-    else{
-        if (_typeCar in ((_faction get "vehiclesMilitiaLightArmed") + (_faction get "vehiclesMilitiaCars"))) then{
-            _unitType = _faction get "unitMilitiaGrunt"; 
+    if (_typePatrol != "LAND") then {
+        if (_veh emptyPositions "CargoFFV" == 0) then {
+            _maxPassangers = 0;
+        } else {
+            _maxPassangers = 4 min (_veh emptyPositions "CargoFFV");
+        };
+    } else {
+        if (_typeCar in (_faction get "vehiclesPolice")) then{
+            _unitType = _faction get "unitPoliceGrunt"; 
+        }   
+        else{
+            if (_typeCar in ((_faction get "vehiclesMilitiaLightArmed") + (_faction get "vehiclesMilitiaCars"))) then{
+                _unitType = _faction get "unitMilitiaGrunt"; 
+            };
         };
     };
-    
+    private _passangers = (_freeCargo min _maxPassangers);
     for "_i" from 0 to (_passangers - 1) do {
         _groupType pushback  _unitType;
     }; 
     
 	sleep 1;
 	_groupX = [_posbase, _sideX, _groupType] call A3A_fnc_spawnGroup;
-	{_x assignAsCargo _veh;_x moveInCargo [_veh, _forEachIndex + min(2, _freeCargo)]; _soldiers pushBack _x; [_x] joinSilent _groupVeh; [_x,"",false] call A3A_fnc_NATOinit} forEach units _groupX;
+	{_x assignAsCargo _veh;_x moveInCargo [_veh, _forEachIndex + (2 min _freeCargo)]; _soldiers pushBack _x; [_x] joinSilent _groupVeh; [_x,"",false] call A3A_fnc_NATOinit} forEach units _groupX;
 	deleteGroup _groupX;
-	};
+};
 
 //if (_typePatrol == "LAND") then {_veh forceFollowRoad true};
 
