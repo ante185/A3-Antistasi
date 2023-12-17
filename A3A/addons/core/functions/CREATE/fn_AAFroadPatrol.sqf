@@ -122,7 +122,7 @@ if ((_veh emptyPositions "Cargo") > 0) then
     private _groupType = [];
     private _unitType = _faction get "unitGrunt";
     if (_typePatrol != "LAND") then {
-        if (_veh emptyPositions "CargoFFV" == 0) then {
+        if (_veh emptyPositions "CargoFFV" == 0 || count (crew _veh) > 3) then {
             _maxPassangers = 0;
         } else {
             _maxPassangers = 4 min (_veh emptyPositions "CargoFFV");
@@ -143,8 +143,9 @@ if ((_veh emptyPositions "Cargo") > 0) then
     }; 
     
 	sleep 1;
+    private _noFFVSeats = _veh emptyPositions "CargoNoFFV";
 	_groupX = [_posbase, _sideX, _groupType] call A3A_fnc_spawnGroup;
-	{_x assignAsCargo _veh;_x moveInCargo [_veh, _forEachIndex + (2 min _freeCargo)]; _soldiers pushBack _x; [_x] joinSilent _groupVeh; [_x,"",false] call A3A_fnc_NATOinit} forEach units _groupX;
+	{_x assignAsCargo _veh;_x moveInCargo [_veh, _forEachIndex + (_noFFVSeats min _freeCargo)]; _soldiers pushBack _x; [_x] joinSilent _groupVeh; [_x,"",false] call A3A_fnc_NATOinit} forEach units _groupX;
 	deleteGroup _groupX;
 };
 
