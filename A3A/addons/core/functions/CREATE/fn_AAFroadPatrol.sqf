@@ -43,13 +43,13 @@ if (_base in seaports) then {
 			_typePatrol = "AIR";
 		};
         if ( _sideX isEqualTo Invaders) then {
-            _typeCar = selectRandom (selectRandomWeighted [(_faction get "vehiclesLightArmed"), 1, (_faction get "vehiclesLightUnarmed"), aggressionInvaders]);
+            _typeCar = selectRandom (selectRandom [(_faction get "vehiclesLightArmed"), (_faction get "vehiclesLightUnarmed")]);
         } else{
-            _typeCar = selectRandom (selectRandomWeighted [(_faction get "vehiclesLightArmed"), 1, (_faction get "vehiclesLightUnarmed"), aggressionOccupants]);
+            _typeCar = selectRandom (selectRandom [(_faction get "vehiclesLightArmed"), (_faction get "vehiclesLightUnarmed")]);
         };
 	} else {
-		_typeCar = selectRandom (selectRandomWeighted[(_faction get "vehiclesPolice"), 1 max (5 - tierWar), (_faction get "vehiclesMilitiaCars"), tierWar + aggressionOccupants/5, (_faction get "vehiclesMilitiaLightArmed"), tierWar + aggressionOccupants - 1]);
-	};
+		_typeCar = selectRandom (selectRandom[(_faction get "vehiclesPolice"), (_faction get "vehiclesMilitiaCars"), (_faction get "vehiclesMilitiaLightArmed")]);
+    };
 };
 
 Info_3("Sending patrol of type %1 vehicle %2 from %3", _typePatrol, _typeCar, _base);
