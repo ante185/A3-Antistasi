@@ -263,8 +263,10 @@ _militiaLoadoutData set ["antiInfantryGrenades", ["LIB_MillsBomb"]];
 _militiaLoadoutData set ["smokeGrenades", ["LIB_No77"]];
 
 _militiaLoadoutData set ["ATLaunchers", ["LIB_PIAT"]];
-_militiaLoadoutData set ["slWeapons", ["LIB_M1_Carbine", "LIB_M1928A1_Thompson", "LIB_Sten_Mk2", "LIB_Sten_Mk2"
-["LIB_Sten_Mk5", "LIB_ACC_No4_Mk2_Bayo", "", "", [], [], ""]
+_militiaLoadoutData set ["slWeapons", [
+"LIB_M1_Carbine", "LIB_M1928A1_Thompson", 
+"LIB_Sten_Mk2", "LIB_Sten_Mk2",
+["LIB_Sten_Mk5", "LIB_ACC_No4_Mk2_Bayo", "", "", [], [], ""],
 ["LIB_Sten_Mk5", "LIB_ACC_No4_Mk2_Bayo", "", "", [], [], ""]
 ]];
 _militiaLoadoutData set ["rifles", [

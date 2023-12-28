@@ -81,7 +81,7 @@
 ["minefieldAT", ["LIB_TM44_MINE"]] call _fnc_saveToTemplate;
 ["minefieldAPERS", ["LIB_pomzec_MINE","LIB_PMD6_MINE"]] call _fnc_saveToTemplate;
 
-#include "IFA_Reb_Vehicle_Attributes.sqf"
+#include "IFA_Vehicle_Attributes.sqf"
 
 /////////////////////
 ///  Identities   ///

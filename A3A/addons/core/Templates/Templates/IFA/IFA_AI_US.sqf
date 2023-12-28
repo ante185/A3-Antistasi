@@ -74,7 +74,7 @@ for "_i" from 1 to _tankRatio do { _tanks append _mediumTanks; };
 ["uavsAttack", []] call _fnc_saveToTemplate;
 ["uavsPortable", []] call _fnc_saveToTemplate;
 
-#include "IFA_Reb_Vehicle_Attributes.sqf"
+#include "IFA_Vehicle_Attributes.sqf"
 
 //Config special vehicles
 //These intentionally appear again above among the regular 'military' vehile, to inject some british (militia) troops into the mix

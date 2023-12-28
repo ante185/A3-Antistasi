@@ -85,8 +85,6 @@ for "_i" from 1 to _tankRatio do { _tanks append _mediumTanks; };
 ["uavsAttack", []] call _fnc_saveToTemplate;
 ["uavsPortable", []] call _fnc_saveToTemplate;
 
-#include "IFA_Reb_Vehicle_Attributes.sqf"
-
 //Config special vehicles
 ["vehiclesMilitiaLightArmed", ["LIB_Kfz1_MG42_camo", "LIB_Kfz1_MG42_camo"]] call _fnc_saveToTemplate;
 ["vehiclesMilitiaTrucks", ["LIB_OpelBlitz_Open_G_Camo"]] call _fnc_saveToTemplate;
@@ -106,6 +104,8 @@ for "_i" from 1 to _tankRatio do { _tanks append _mediumTanks; };
 //CFGVehicles variant of Mines are needed "ATMine", "APERSTripMine", "APERSMine"
 ["minefieldAT", ["LIB_TMI_42_MINE"]] call _fnc_saveToTemplate;
 ["minefieldAPERS", ["LIB_SMI_35_1_MINE","LIB_SMI_35_MINE", "LIB_shumine_42_MINE"]] call _fnc_saveToTemplate;
+
+#include "IFA_Vehicle_Attributes.sqf"
 
 /////////////////////
 ///  Identities   ///

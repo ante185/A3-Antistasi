@@ -97,7 +97,7 @@ for "_i" from 1 to _tankRatio do { _tanks append _mediumTanks; };
 ["minefieldAT", ["LIB_US_M1A1_ATMINE_ammo"]] call _fnc_saveToTemplate;
 ["minefieldAPERS", ["LIB_M3_ammo","LIB_US_M3_ammo"]] call _fnc_saveToTemplate;
 
-#include "IFA_Reb_Vehicle_Attributes.sqf"
+#include "IFA_Vehicle_Attributes.sqf"
 
 /////////////////////
 ///  Identities   ///
