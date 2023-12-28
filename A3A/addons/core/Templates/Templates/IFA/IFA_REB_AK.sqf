@@ -24,11 +24,11 @@
 //////////////////////////
 
 ["vehiclesBasic", ["LIB_Willys_MB"]] call _fnc_saveToTemplate;
-["vehiclesLightUnarmed", ["LIB_GazM1_FFI"]] call _fnc_saveToTemplate;
+["vehiclesLightUnarmed", ["LIB_GazM1_SOV"]] call _fnc_saveToTemplate;
 ["vehiclesLightArmed", ["LIB_UK_Willys_MB_M1919"]] call _fnc_saveToTemplate;
-["vehiclesTruck", ["LIB_CIV_FFI_CitC4_5"]] call _fnc_saveToTemplate;
-["vehiclesAT", ["LIB_Zis5v_61K"]] call _fnc_saveToTemplate;
-["vehiclesAA", []] call _fnc_saveToTemplate;
+["vehiclesTruck", ["LIB_Zis5v"]] call _fnc_saveToTemplate;
+["vehiclesAT", []] call _fnc_saveToTemplate;
+["vehiclesAA", ["LIB_Zis5v_61K"]] call _fnc_saveToTemplate;
 
 ["vehiclesBoat", ["LIB_LCA"]] call _fnc_saveToTemplate;
 
@@ -43,7 +43,7 @@
 
 ["staticMGs", ["LIB_M1919_M2"]] call _fnc_saveToTemplate;
 ["staticAT", ["LIB_Zis3"]] call _fnc_saveToTemplate;
-["staticAA", ["LIB_FlaK_30"]] call _fnc_saveToTemplate;
+["staticAA", ["LIB_61k"]] call _fnc_saveToTemplate;
 ["staticMortars", ["LIB_M2_60"]] call _fnc_saveToTemplate;
 ["staticMortarMagHE", "LIB_8Rnd_60mmHE_M2"] call _fnc_saveToTemplate;
 ["staticMortarMagSmoke", ""] call _fnc_saveToTemplate;
@@ -66,8 +66,11 @@ private _initialRebelEquipment = [
 "LIB_FLARE_PISTOL", "LIB_1Rnd_flare_white",
 "V_LIB_SOV_RA_Belt", "V_LIB_UK_P37_Crew", 
 ["LIB_Ladung_Small_MINE_mag", 10],
-"B_LIB_US_Bandoleer",
-"LIB_Binocular_GER"
+"B_LIB_DAK_A_frame",
+"LIB_Binocular_GER",
+["H_LIB_WP_Helmet", 1],
+["H_LIB_WP_Helmet_camo", 1],
+["H_LIB_WP_Helmet_med", 1]
 ];
 
 if (A3A_hasTFAR) then {_initialRebelEquipment append ["tf_microdagr","tf_anprc154"]};
@@ -78,6 +81,12 @@ if (A3A_hasTFARBeta && startWithLongRangeRadio) then {_initialRebelEquipment app
 
 
 private _rebUniforms = [
+"U_LIB_WP_Soldier_camo_3",
+"U_LIB_CIV_Citizen_2",
+"U_LIB_CIV_Citizen_3"
+];          //Uniforms given to Normal Rebels
+
+private _civUniforms = [
 "U_LIB_CIV_Citizen_1",
 "U_LIB_CIV_Citizen_2",
 "U_LIB_CIV_Citizen_3",
@@ -94,11 +103,11 @@ private _rebUniforms = [
 "U_LIB_CIV_Woodlander_2",
 "U_LIB_CIV_Woodlander_3",
 "U_LIB_CIV_Woodlander_4"
-];          //Uniforms given to Normal Rebels
+];
 
-["uniforms", _rebUniforms] call _fnc_saveToTemplate;         //These Items get added to the Arsenal
+["uniforms", _rebUniforms + _civUniforms] call _fnc_saveToTemplate;         //These Items get added to the Arsenal
 
-["headgear", ["H_LIB_CIV_Villager_Cap_1","H_LIB_CIV_Villager_Cap_2","H_LIB_CIV_Villager_Cap_3","H_LIB_CIV_Villager_Cap_4"]] call _fnc_saveToTemplate;          //Headgear used by Rebell Ai until you have Armored Headgear.
+["headgear", ["H_LIB_WP_Cap"]] call _fnc_saveToTemplate;          //Headgear used by Rebell Ai until you have Armored Headgear.
 
 /////////////////////
 ///  Identities   ///

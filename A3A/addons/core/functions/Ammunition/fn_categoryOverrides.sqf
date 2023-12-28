@@ -383,6 +383,8 @@ private _categoryOverrideTable = [
 ["ACRE_VHF30108MAST", ["Gadgets","items"]],
 ["ACRE_PRC117F", ["Gadgets","items"]],
 
+["LIB_Webley_Flare", ["Unknown", "Weapons"]],
+["LIB_FLARE_PISTOL", ["Unknown", "Weapons"]],
 ["LIB_M2_Tripod", ["StaticWeaponParts","Items"]],
 ["LIB_Laffete_Tripod", ["StaticWeaponParts","Items"]],
 ["LIB_BM37_Tripod", ["StaticWeaponParts","Items"]],
@@ -396,7 +398,6 @@ private _categoryOverrideTable = [
 ["LIB_Faustpatrone", ["RocketLaunchers","Weapons","AT","Disposable"]],
 ["LIB_PzFaust_30m", ["RocketLaunchers","Weapons","AT","Disposable"]],
 ["LIB_PzFaust_60m", ["RocketLaunchers","Weapons","AT","Disposable"]],
-["LIB_M1A1_Bazooka", ["RocketLaunchers","Weapons","AT","MissileLaunchers"]],
 ["LIB_FG42G", ["SniperRifles","MachineGuns","Rifles","Weapons"]],
 ["LIB_MP44", ["SMGs","Rifles","Weapons"]],
 ["LIB_MP44_GW", ["SMGs","Rifles","Weapons","GrenadeLaunchers"]],
