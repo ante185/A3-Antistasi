@@ -994,6 +994,13 @@ class Templates
         priority = 65;
         file = "IFA_REB_FFI";
     };
+    class IFA_AK : IFA_Base
+    {
+        side = "Reb";
+        flagTexture = QPATHTOFOLDER(Templates\Templates\IFA\flag_ak.paa);
+        name = "IFA Polish Resistance";
+        file = "IFA_REB_AK";
+    };
     class IFA_CIV_FR : IFA_Base
     {
         side = "Civ";

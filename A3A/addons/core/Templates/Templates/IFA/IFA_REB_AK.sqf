@@ -17,7 +17,7 @@
 ["flyGear", ["U_LIB_US_Bomber_Pilot"]] call _fnc_saveToTemplate;
 ["vehiclesCivSupply", ["LIB_OpelBlitz_Ambulance_w"]] call _fnc_saveToTemplate;
 
-["surrenderCrate", "LIB_BasicWeaponsBox_GER"] call _fnc_saveToTemplate; //WIP
+["surrenderCrate", "LIB_Lone_Big_Box"] call _fnc_saveToTemplate; //WIP
 
 //////////////////////////
 //       Vehicles       //
@@ -41,7 +41,7 @@
 ["vehiclesCivBoat", ["B_Boat_Transport_01_F"]] call _fnc_saveToTemplate;
 ["vehiclesCivPlane", []] call _fnc_saveToTemplate;
 
-["staticMGs", ["LIB_M1919_M2"]] call _fnc_saveToTemplate;
+["staticMGs", ["LIB_Maxim_M30_base"]] call _fnc_saveToTemplate;
 ["staticAT", ["LIB_Zis3"]] call _fnc_saveToTemplate;
 ["staticAA", ["LIB_61k"]] call _fnc_saveToTemplate;
 ["staticMortars", ["LIB_M2_60"]] call _fnc_saveToTemplate;
@@ -81,9 +81,9 @@ if (A3A_hasTFARBeta && startWithLongRangeRadio) then {_initialRebelEquipment app
 
 
 private _rebUniforms = [
-"U_LIB_WP_Soldier_camo_3",
-"U_LIB_CIV_Citizen_2",
-"U_LIB_CIV_Citizen_3"
+"U_LIB_WP_Soldier_camo_1",
+"U_LIB_WP_Soldier_camo_2",
+"U_LIB_WP_Soldier_camo_3"
 ];          //Uniforms given to Normal Rebels
 
 private _civUniforms = [
@@ -113,10 +113,9 @@ private _civUniforms = [
 ///  Identities   ///
 /////////////////////
 
-//Faces and Voices given to Rebell AI
-["faces", ["LivonianHead_6","WhiteHead_01","WhiteHead_02","WhiteHead_05","WhiteHead_06","WhiteHead_07","WhiteHead_08","WhiteHead_12","WhiteHead_15","WhiteHead_18"]] call _fnc_saveToTemplate;
-["voices", ["Male01FRE","Male02FRE","Male03FRE"]] call _fnc_saveToTemplate;
-"RussianMen" call _fnc_saveNames;
+["faces", ["LivonianHead_1","LivonianHead_10","LivonianHead_2","LivonianHead_3","LivonianHead_4","LivonianHead_6","LivonianHead_9","Sturrock","WhiteHead_01","WhiteHead_02","WhiteHead_03","WhiteHead_04","WhiteHead_05","WhiteHead_06","WhiteHead_07","WhiteHead_08","WhiteHead_09","WhiteHead_10","WhiteHead_11","WhiteHead_13","WhiteHead_14","WhiteHead_15","WhiteHead_17","WhiteHead_18","WhiteHead_20","WhiteHead_21","WhiteHead_30"]] call _fnc_saveToTemplate;
+["voices", ["Male01pol","Male02pol","Male03pol"]] call _fnc_saveToTemplate;
+"EnochMen" call _fnc_saveNames;
 
 //////////////////////////
 //       Loadouts       //

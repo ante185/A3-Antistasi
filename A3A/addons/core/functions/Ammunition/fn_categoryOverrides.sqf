@@ -398,6 +398,8 @@ private _categoryOverrideTable = [
 ["LIB_Faustpatrone", ["RocketLaunchers","Weapons","AT","Disposable"]],
 ["LIB_PzFaust_30m", ["RocketLaunchers","Weapons","AT","Disposable"]],
 ["LIB_PzFaust_60m", ["RocketLaunchers","Weapons","AT","Disposable"]],
+["LIB_M1_Carbine", ["SMGs","Rifles","Weapons"]],
+["LIB_M1A1_Carbine", ["SMGs","Rifles","Weapons"]],
 ["LIB_FG42G", ["SniperRifles","MachineGuns","Rifles","Weapons"]],
 ["LIB_MP44", ["SMGs","Rifles","Weapons"]],
 ["LIB_MP44_GW", ["SMGs","Rifles","Weapons","GrenadeLaunchers"]],
