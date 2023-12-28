@@ -229,12 +229,13 @@ _militaryLoadoutData set ["backpacks", ["B_LIB_GER_A_frame"]];
 _militaryLoadoutData set ["helmets", ["H_LIB_GER_Helmet"]];
 
 _militaryLoadoutData set ["slWeapons", ["LIB_MP40"]];
-_militaryLoadoutData set ["rifles", ["LIB_K98"]];
+_militaryLoadoutData set ["rifles", [["LIB_K98", "LIB_ACC_K98_Bayo", "", "", [], [], ""]]];
 _militaryLoadoutData set ["carbines", ["LIB_G41"]];
 _militaryLoadoutData set ["grenadeLaunchers", [
-["LIB_K98_GW", "LIB_ACC_GW_SB_Empty", "", "", [], ["LIB_1Rnd_G_SPRGR_30"], ""],
-["LIB_K98_GW", "LIB_ACC_GW_SB_Empty", "", "", [], ["LIB_1Rnd_G_PZGR_30"], ""],
-["LIB_K98_GW", "LIB_ACC_GW_SB_Empty", "", "", [], ["LIB_1Rnd_G_PZGR_40"], ""]
+["LIB_K98", "LIB_ACC_GW_SB_Empty", "", "", [], ["LIB_1Rnd_G_SPRGR_30"], ""],
+["LIB_K98", "LIB_ACC_GW_SB_Empty", "", "", [], ["LIB_1Rnd_G_SPRGR_30"], ""],
+["LIB_K98", "LIB_ACC_GW_SB_Empty", "", "", [], ["LIB_1Rnd_G_PZGR_30"], ""],
+["LIB_K98", "LIB_ACC_GW_SB_Empty", "", "", [], ["LIB_1Rnd_G_PZGR_40"], ""]
 ]];
 _militaryLoadoutData set ["SMGs", ["LIB_MP40", "LIB_MP38"]];
 _militaryLoadoutData set ["machineGuns", ["LIB_MG34", "LIB_MG42"]];
@@ -252,12 +253,13 @@ _militiaLoadoutData set ["helmets", ["H_LIB_GER_Cap"]];
 _militiaLoadoutData set ["ATLaunchers", []];
 _militiaLoadoutData set ["slWeapons", ["LIB_MP38", "LIB_K98"]];
 _militiaLoadoutData set ["lightATLaunchers", ["LIB_Faustpatrone"]];
-_militiaLoadoutData set ["rifles", ["LIB_K98"]];
-_militiaLoadoutData set ["carbines", []];
+_militiaLoadoutData set ["rifles", [["LIB_K98", "LIB_ACC_K98_Bayo", "", "", [], [], ""]]];
+_militiaLoadoutData set ["carbines", ["LIB_MP38", "LIB_K98", "LIB_G3340"]];
 _militiaLoadoutData set ["grenadeLaunchers", []];
 _militiaLoadoutData set ["SMGs", ["LIB_MP38"]];
-_militiaLoadoutData set ["machineGuns", []];
-_militiaLoadoutData set ["sidearms", ["LIB_WaltherPPK"]];
+_militiaLoadoutData set ["machineGuns", ["LIB_MP38", "LIB_K98"]];
+_militiaLoadoutData set ["sidearms", ["LIB_WaltherPPK", "LIB_P38"]];
+_militiaLoadoutData set ["slSidearms", ["LIB_P38", "LIB_P38", "LIB_FLARE_PISTOL"]];
 
 //////////////////////////
 //    Misc Loadouts     //
