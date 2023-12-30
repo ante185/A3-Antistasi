@@ -15,9 +15,9 @@
 // All of bellow are optional overrides.
 ["diveGear", [""]] call _fnc_saveToTemplate;
 ["flyGear", ["U_LIB_US_Bomber_Pilot"]] call _fnc_saveToTemplate;
-["vehiclesCivSupply", ["LIB_OpelBlitz_Ambulance_w"]] call _fnc_saveToTemplate;
+["vehiclesCivSupply", ["LIB_OpelBlitz_Ambulance_w"]] call _fnc_saveToTemplate; //We should create a inert "box truck" version
 
-["surrenderCrate", "LIB_Lone_Big_Box"] call _fnc_saveToTemplate; //WIP
+["surrenderCrate", "LIB_Lone_Big_Box"] call _fnc_saveToTemplate;
 
 //////////////////////////
 //       Vehicles       //
@@ -25,7 +25,7 @@
 
 ["vehiclesBasic", ["LIB_Willys_MB"]] call _fnc_saveToTemplate;
 ["vehiclesLightUnarmed", ["LIB_GazM1_SOV"]] call _fnc_saveToTemplate;
-["vehiclesLightArmed", ["LIB_UK_Willys_MB_M1919"]] call _fnc_saveToTemplate;
+["vehiclesLightArmed", ["LIB_UK_Willys_MB_M1919"]] call _fnc_saveToTemplate;  //replace with a version in plain green
 ["vehiclesTruck", ["LIB_Zis5v"]] call _fnc_saveToTemplate;
 ["vehiclesAT", []] call _fnc_saveToTemplate;
 ["vehiclesAA", ["LIB_Zis5v_61K"]] call _fnc_saveToTemplate;
