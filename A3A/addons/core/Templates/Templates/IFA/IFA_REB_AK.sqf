@@ -33,10 +33,10 @@
 ["vehiclesBoat", ["LIB_LCA"]] call _fnc_saveToTemplate;
 
 ["vehiclesPlane", ["LIB_C47_RAF"]] call _fnc_saveToTemplate;
-["vehiclesMedical", ["LIB_OpelBlitz_Ambulance_w"]] call _fnc_saveToTemplate;
+["vehiclesMedical", ["LIB_Zis5v_Med"]] call _fnc_saveToTemplate;
 
-["vehiclesCivCar", ["LIB_GazM1_dirty"]] call _fnc_saveToTemplate;
-["vehiclesCivTruck", ["LIB_CIV_FFI_CitC4_2"]] call _fnc_saveToTemplate;
+["vehiclesCivCar", ["LIB_GazM1_dirty", "LIB_GazM1"]] call _fnc_saveToTemplate;
+["vehiclesCivTruck", ["LIB_CIV_FFI_CitC4", "LIB_CIV_FFI_CitC4_3"]] call _fnc_saveToTemplate;
 ["vehiclesCivHeli", []] call _fnc_saveToTemplate;
 ["vehiclesCivBoat", ["B_Boat_Transport_01_F"]] call _fnc_saveToTemplate;
 ["vehiclesCivPlane", []] call _fnc_saveToTemplate;
