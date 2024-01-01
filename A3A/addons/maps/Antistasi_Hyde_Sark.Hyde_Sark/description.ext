@@ -1,6 +1,6 @@
 #include "..\missionDescription\master.hpp"
 
-OnLoadName = "Antistasi Hyde Sark";
+OnLoadName = "Antistasi Sark";
 OnLoadMission = $STR_antistasi_mission_info_SPE_Normandy_blurb_text;
 briefingName = "Antistasi - Liberation of Sark";
 overviewText = $STR_antistasi_mission_info_Stratis_description_text;
