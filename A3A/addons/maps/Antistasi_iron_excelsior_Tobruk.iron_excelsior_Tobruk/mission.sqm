@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=1025;
 	class ItemIDProvider
 	{
-		nextID=639;
+		nextID=1095;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=166;
+		nextID=739;
 	};
 	class Camera
 	{
-		pos[]={9872.3877,29.126358,2671.522};
-		dir[]={-0.79031038,-0.39483404,-0.468539};
-		up[]={-0.33963612,0.91874868,-0.20135498};
-		aside[]={-0.50997043,-7.5968273e-008,0.8601954};
+		pos[]={5100.8774,182.92917,1665.7395};
+		dir[]={-0.80915993,-0.55253607,-0.20009468};
+		up[]={-0.53639579,0.83347261,-0.13264394};
+		aside[]={-0.24006633,-2.0623702e-007,0.97079116};
 	};
 };
 binarizationWanted=0;
@@ -45,13 +45,27 @@ addons[]=
 	"WW2_Objects_c_Structures_WW2_Alamein_c",
 	"WW2_Objects_c_Misc_WW2_EditorPreview_c",
 	"WW2_Objects_c_Misc_IF_EditorMapSizeAndIcon_c",
-	"A3A_core"
+	"A3A_core",
+	"WW2_Objects_c_Structures_WW2_Trenches_c",
+	"WW2_Objects_c_Structures_IF_Trenches_c",
+	"WW2_Objects_c_Misc_WW2_SimpleObjects_c_IF",
+	"WW2_Objects_c_Misc_IF_EditorPreview_c",
+	"WW2_Objects_c_Misc_I44_ShowClassInEditor_Buildings_c",
+	"WW2_Objects_c_Misc_WW2_SimpleObjects_c_I44",
+	"WW2_Objects_c_Misc_I44_EditorMapSizeAndIcon_c",
+	"WW2_Objects_c_Misc_I44_EditorPreviews_c",
+	"WW2_Objects_c_Structures_WW2_BET_Militia_c",
+	"WW2_Objects_c_Misc_WW2_SimpleObjects_c_WW2",
+	"WW2_Objects_c_Structures_IF_Buildings_c",
+	"CUP_Misc_e_Config",
+	"WW2_Objects_c_Misc_WW2_SimpleObjects_c_CUP",
+	"CUP_Misc3_Config"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=14;
+		items=28;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -139,6 +153,76 @@ class AddonsMetaData
 			name="A3A - core";
 			author="Antistasi Dev Team";
 		};
+		class Item14
+		{
+			className="WW2_Objects_c_Structures_WW2_Trenches_c";
+			name="WW2_Objects_c_Structures_WW2_Trenches_c";
+		};
+		class Item15
+		{
+			className="WW2_Objects_c_Structures_IF_Trenches_c";
+			name="WW2_Objects_c_Structures_IF_Trenches_c";
+		};
+		class Item16
+		{
+			className="WW2_Objects_c_Misc_WW2_SimpleObjects_c_IF";
+			name="WW2_Objects_c_Misc_WW2_SimpleObjects_c_IF";
+		};
+		class Item17
+		{
+			className="WW2_Objects_c_Misc_IF_EditorPreview_c";
+			name="WW2_Objects_c_Misc_IF_EditorPreview_c";
+		};
+		class Item18
+		{
+			className="WW2_Objects_c_Misc_I44_ShowClassInEditor_Buildings_c";
+			name="WW2_Objects_c_Misc_I44_ShowClassInEditor_Buildings_c";
+		};
+		class Item19
+		{
+			className="WW2_Objects_c_Misc_WW2_SimpleObjects_c_I44";
+			name="WW2_Objects_c_Misc_WW2_SimpleObjects_c_I44";
+		};
+		class Item20
+		{
+			className="WW2_Objects_c_Misc_I44_EditorMapSizeAndIcon_c";
+			name="WW2_Objects_c_Misc_I44_EditorMapSizeAndIcon_c";
+		};
+		class Item21
+		{
+			className="WW2_Objects_c_Misc_I44_EditorPreviews_c";
+			name="WW2_Objects_c_Misc_I44_EditorPreviews_c";
+		};
+		class Item22
+		{
+			className="WW2_Objects_c_Structures_WW2_BET_Militia_c";
+			name="WW2_Objects_c_Structures_WW2_BET_Militia_c";
+		};
+		class Item23
+		{
+			className="WW2_Objects_c_Misc_WW2_SimpleObjects_c_WW2";
+			name="WW2_Objects_c_Misc_WW2_SimpleObjects_c_WW2";
+		};
+		class Item24
+		{
+			className="WW2_Objects_c_Structures_IF_Buildings_c";
+			name="WW2_Objects_c_Structures_IF_Buildings_c";
+		};
+		class Item25
+		{
+			className="CUP_Misc_e_Config";
+			name="CUP_Misc_e_Config";
+		};
+		class Item26
+		{
+			className="WW2_Objects_c_Misc_WW2_SimpleObjects_c_CUP";
+			name="WW2_Objects_c_Misc_WW2_SimpleObjects_c_CUP";
+		};
+		class Item27
+		{
+			className="CUP_Misc3_Config";
+			name="CUP_Misc3_Config";
+		};
 	};
 };
 dlcs[]=
@@ -175,7 +259,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=23;
+		items=21;
 		class Item0
 		{
 			dataType="Layer";
@@ -233,7 +317,7 @@ class Mission
 									colorName="ColorYellow";
 									a=3;
 									b=3;
-									angle=174.51367;
+									angle=174.51366;
 									id=311;
 								};
 							};
@@ -405,7 +489,7 @@ class Mission
 									colorName="ColorGreen";
 									a=5;
 									b=5;
-									angle=90.655838;
+									angle=90.65583;
 									id=329;
 								};
 								class Item1
@@ -466,7 +550,7 @@ class Mission
 									colorName="ColorGUER";
 									a=63.996193;
 									b=129.73029;
-									angle=213.13673;
+									angle=213.13672;
 									id=335;
 									atlOffset=-0.00030899048;
 								};
@@ -503,7 +587,7 @@ class Mission
 									colorName="ColorGreen";
 									a=5;
 									b=5;
-									angle=0.5077489;
+									angle=0.50774884;
 									id=339;
 								};
 								class Item1
@@ -746,7 +830,7 @@ class Mission
 									colorName="ColorGreen";
 									a=5;
 									b=5;
-									angle=270.74051;
+									angle=270.74048;
 									id=369;
 								};
 								class Item1
@@ -759,7 +843,7 @@ class Mission
 									colorName="ColorGUER";
 									a=100.15186;
 									b=113.09453;
-									angle=87.343666;
+									angle=87.343658;
 									id=370;
 								};
 								class Item2
@@ -892,7 +976,7 @@ class Mission
 									colorName="ColorGUER";
 									a=94.844757;
 									b=212.55391;
-									angle=203.95573;
+									angle=203.95572;
 									id=365;
 									atlOffset=3.2241707;
 								};
@@ -1028,7 +1112,7 @@ class Mission
 									colorName="ColorGreen";
 									a=5;
 									b=5;
-									angle=94.534813;
+									angle=94.534805;
 									id=439;
 									atlOffset=0.60531998;
 								};
@@ -2003,7 +2087,7 @@ class Mission
 							colorName="ColorGreen";
 							a=5;
 							b=5;
-							angle=332.16461;
+							angle=332.16458;
 							id=1011;
 							atlOffset=3.9314418;
 						};
@@ -3724,21 +3808,6 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5013.0054,150.08386,1693.7489};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1062;
-			type="Land_WW2_Trench_MG_Low";
-		};
-		class Item6
-		{
-			dataType="Object";
-			class PositionInfo
-			{
 				position[]={5025.4023,150.58694,1715.651};
 			};
 			side="Empty";
@@ -3749,7 +3818,7 @@ class Mission
 			id=1063;
 			type="Land_WW2_Trench76";
 		};
-		class Item7
+		class Item6
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3765,7 +3834,7 @@ class Mission
 			id=1069;
 			type="Land_WW2_Trench76";
 		};
-		class Item8
+		class Item7
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3780,7 +3849,7 @@ class Mission
 			id=1072;
 			type="Land_I44_Buildings_Bunker_AA";
 		};
-		class Item9
+		class Item8
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3795,7 +3864,7 @@ class Mission
 			id=1073;
 			type="Land_WW2_BET_MG_Nest";
 		};
-		class Item10
+		class Item9
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3810,7 +3879,7 @@ class Mission
 			id=1074;
 			type="Land_WW2_BET_MG_Nest_Splinter_B";
 		};
-		class Item11
+		class Item10
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3825,7 +3894,7 @@ class Mission
 			id=1075;
 			type="Land_WW2_BET_MG_Nest_Splinter_A";
 		};
-		class Item12
+		class Item11
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3840,7 +3909,7 @@ class Mission
 			id=1077;
 			type="Land_WW2_BET_RGB669_Pak_R_Splinter";
 		};
-		class Item13
+		class Item12
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3855,7 +3924,7 @@ class Mission
 			id=1080;
 			type="Land_Setka_Car";
 		};
-		class Item14
+		class Item13
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3871,7 +3940,7 @@ class Mission
 			id=1084;
 			type="Land_Fort_Bagfence_Bunker";
 		};
-		class Item15
+		class Item14
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3887,7 +3956,7 @@ class Mission
 			type="Land_WW2_BET_RGB669_Pak_L";
 			atlOffset=0.020080566;
 		};
-		class Item16
+		class Item15
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3902,7 +3971,7 @@ class Mission
 			id=1087;
 			type="Land_WW2_BET_RGB669_Pak_R";
 		};
-		class Item17
+		class Item16
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3918,23 +3987,7 @@ class Mission
 			type="Land_WW2_BET_RGB669_Pak_R_Splinter";
 			atlOffset=0.064880371;
 		};
-		class Item18
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5037.3052,150.05882,1696.5118};
-				angles[]={0,0,0.0039967569};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1090;
-			type="Land_WW2_Trench_Mortar";
-		};
-		class Item19
+		class Item17
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3949,7 +4002,7 @@ class Mission
 			id=1091;
 			type="Land_WW2_BET_Flak_Bettung";
 		};
-		class Item20
+		class Item18
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3965,7 +4018,7 @@ class Mission
 			id=1092;
 			type="Land_Fort_Bagfence_Bunker";
 		};
-		class Item21
+		class Item19
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3981,7 +4034,7 @@ class Mission
 			id=1093;
 			type="Fort_EnvelopeSmall_EP1";
 		};
-		class Item22
+		class Item20
 		{
 			dataType="Object";
 			class PositionInfo
