@@ -13,6 +13,7 @@
     
     //Statics
     ["LIB_M1919_M2", ["rebCost", 800]],
+    ["LIB_Maxim_M30_base", ["rebCost", 800]],
     ["LIB_Zis3", ["rebCost", 2000]],
     ["LIB_Zis3_w", ["rebCost", 2000]],
     ["LIB_M2_60", ["rebCost", 2000]],
