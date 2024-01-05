@@ -173,25 +173,18 @@ for "_i" from 0 to (count _buildings) - 1 do
         {
             private _type = selectRandom (_faction get "staticMGs");
             private _dir = (getDir _building);
-            private _pos = _building modelToWorld ([[0,1.5,-0.15], [0,1.7,0.02]] select (_type == "LIB_M1919_M2"));
+            private _pos = _building modelToWorld ([[0,1.5,0.1], [0,1.7,0.02]] select (_type == "LIB_M1919_M2"));
             [_type, _pos, _dir] call _fnc_spawnStatic;
         };
         if     ((_typeB == "Land_WW2_BET_MG_Nest_Splinter_A") or (_typeB == "Land_WW2_BET_MG_Nest_Splinter_B")) exitWith
         {
             private _type = selectRandom (_faction get "staticMGs");
-            private _dir = (getDir _building);
-            private _pos = _building modelToWorld ([[0.0,2.6,0.4], [0.0,2.6,0.6]] select (_type == "LIB_M1919_M2"));
-            [_type, _pos, _dir] call _fnc_spawnStatic;
-        };
-        if     ((_typeB == "Land_WW2_BET_MG_Nest")) exitWith
-        {
-            private _type = selectRandom (_faction get "staticMGs");
             private _offset = [0,0,0];
             switch (_type) do {
-                case "LIB_M1919_M2": {_offset = [0.30,3.5,0.55]};
-                case "LIB_Maxim_M30_base": {_offset = [0.30,3.5,0.4]};
+                case "LIB_M1919_M2": {_offset = [0.0,2.6,0.6]};
+                case "LIB_Maxim_M30_base": {_offset = [0.0,2.6,0.4]};
                 case "LIB_MG34_Lafette_low_Deployed";
-                case "LIB_MG42_Lafette_low_Deployed": {_offset = [0.30,3.5,0.0]};
+                case "LIB_MG42_Lafette_low_Deployed": {_offset = [0.0,2.6,0.5]};
             };
             private _dir = (getDir _building);
             private _pos = _building modelToWorld _offset;
@@ -255,7 +248,7 @@ for "_i" from 0 to (count _buildings) - 1 do
         {
             private _type = selectRandom (_faction get "staticAA");
             private _dir = (getDir _building);
-            private _pos = _building modelToWorld [-1.0,0.6,-0.2];
+            private _pos = _building modelToWorld [-1.0,0.8,-0.2];
             [_type, _pos, _dir] call _fnc_spawnStatic;
         };
 		if 	((_typeB == "Land_I44_Buildings_Bunker_AA")) exitWith
@@ -283,21 +276,21 @@ for "_i" from 0 to (count _buildings) - 1 do
         //Static AT or AA
 		if 	((_typeB == "Land_Fort_Bagfence_Bunker")) exitWith
         {
-            private _type = selectRandom (_faction get "staticAT");
+            private _type = selectRandom(selectRandom [(_faction get "staticAA"), (_faction get "staticAT")]);
             private _dir = (getDir _building);
             private _pos = _building modelToWorld [0,0,-0.8];
             [_type, _pos, _dir] call _fnc_spawnStatic;
         };
 		if 	((_typeB == "Land_WW2_LAWZ_Tobruk_Trench_gunposition")) exitWith
         {
-            private _type = selectRandom (_faction get "staticAT");
+            private _type = selectRandom(selectRandom [(_faction get "staticAA"), (_faction get "staticAT")]);
             private _dir = (getDir _building) + 180;
             private _pos = _building modelToWorld [0,0,0.1];
             [_type, _pos, _dir] call _fnc_spawnStatic;
         };
 		if 	((_typeB == "Land_WW2_Trench76")) exitWith
         {
-            private _type = selectRandom (_faction get "staticAT");
+            private _type = selectRandom(selectRandomWeighted [(_faction get "staticAA"), 1, (_faction get "staticAT"), 2]);
             private _dir = (getDir _building);
             private _pos = _building modelToWorld [-1.2,-0.6,0.0];
             [_type, _pos, _dir] call _fnc_spawnStatic;
