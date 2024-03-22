@@ -6,8 +6,8 @@ params ["_veh", "_sideX"];
 private _faction = Faction(_sideX);
 private _isMilitia = _veh in ((_faction get "vehiclesMilitiaLightArmed") + (_faction get "vehiclesMilitiaTrucks") + (_faction get "vehiclesMilitiaCars"));
 if(!_isMilitia) then {
-	private mult = [2,4] select (_sideX == Invaders);
-	_isMilitia = (random 10 > (tierWar * mult) );
+	private _mult = [2,4] select (_sideX == Invaders);
+	_isMilitia = (random 10 > (tierWar * _mult) );
 	if(_isMilitia) then {
 		_isMilitia = !(_veh in ((_faction get "vehiclesLightUnarmed") + (_faction get "vehiclesLightArmedTroop") + (_faction get "vehiclesAPCs") + (_faction get "vehiclesIFVs") + (_faction get "vehiclesPlanesTransport")));
 	};
