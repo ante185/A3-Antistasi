@@ -487,7 +487,7 @@ if ("mark" in A3A_enabledDLC) then {
 private _squadLeaderTemplate = {
     ["slHat"] call _fnc_setHelmet;
     ["facewear"] call _fnc_setFacewear;
-    ["Hvests"] call _fnc_setVest;
+    ["Hvests", "vests"] call _fnc_fallback] call _fnc_setVest;
     ["uniforms"] call _fnc_setUniform;
 
     ["backpacks"] call _fnc_setBackpack;
@@ -570,7 +570,7 @@ private _medicTemplate = {
 private _grenadierTemplate = {
     ["helmets"] call _fnc_setHelmet;
     ["facewear"] call _fnc_setFacewear;
-    ["Hvests"] call _fnc_setVest;
+    ["Hvests", "vests"] call _fnc_fallback] call _fnc_setVest;
     ["uniforms"] call _fnc_setUniform;
     ["backpacks"] call _fnc_setBackpack;
 
