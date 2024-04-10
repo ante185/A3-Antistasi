@@ -17,6 +17,10 @@ class lxRF_vehicles_rf_pickup_01_pickup_01_unarmed_rf_p3d : TRIPLES(ADDON,Nodes,
         };
     };
 };
+class a3a_civ_Pickup_fuel_rf : TRIPLES(ADDON,Nodes,Base)
+{
+    class Nodes{};
+};
 class lxRF_vehicles_rf_pickup_01_pickup_01_mmg_rf_p3d : TRIPLES(ADDON,Nodes,Base)
 {
     class Nodes
