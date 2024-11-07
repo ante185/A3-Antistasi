@@ -259,7 +259,8 @@ class Templates
         basepath = QPATHTOFOLDER(Templates\Templates\EF); //the path to the template folder
         priority = 5;
     };
-    class EF_MJTF : EF_Base
+
+    class EF_MJTF_Arid : EF_Base
     {
         side = "Occ";
         flagTexture = "\ef\ef_data\data\Flag_29thMEU_CO.paa";
@@ -267,7 +268,16 @@ class Templates
         file = "EF_AI_MJTF_Arid";
         shortName = "MJTF";
         lore = $STR_A3A_templates_lore_NATO;     
+        climate[] = {"arid"};
     };
+    
+    class EF_MJTF_Temperate : EF_MJTF_Arid
+    {
+        name = "EF MJTF Temperate";
+        file = "EF_AI_MJTF_Temperate";  
+        climate[] = {"temperate", "arctic"};
+    };
+
     // ***************************** VN *****************************
 
     class VN_Base
