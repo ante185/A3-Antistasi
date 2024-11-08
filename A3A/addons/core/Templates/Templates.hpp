@@ -258,6 +258,7 @@ class Templates
         logo = "\ef\ef_data\logos\arma3_ef_logo_ca.paa";
         basepath = QPATHTOFOLDER(Templates\Templates\EF); //the path to the template folder
         priority = 5;
+        forceDLC[] = {"ef"};
     };
 
     class EF_MJTF_Arid : EF_Base
@@ -268,14 +269,14 @@ class Templates
         file = "EF_AI_MJTF_Arid";
         shortName = "MJTF";
         lore = $STR_A3A_templates_lore_NATO;     
-        climate[] = {"arid"};
+        climate[] = {"arid", "arctic"};
     };
     
     class EF_MJTF_Temperate : EF_MJTF_Arid
     {
         name = "EF MJTF Temperate";
         file = "EF_AI_MJTF_Temperate";  
-        climate[] = {"temperate", "arctic"};
+        climate[] = {"temperate", "tropical"};
     };
 
     // ***************************** VN *****************************
