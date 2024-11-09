@@ -43,7 +43,7 @@ private _Tanks = ["B_T_MBT_01_TUSK_F"];
 private _vehiclesHelisLight = ["a3a_Heli_Light_01_ION_F"];
 private _HelisTransport = ["EF_B_Heli_Transport_01_MJTF_Des"];
 private _vehiclesHelisLightAttack = ["a3a_Heli_Light_01_dynamicLoadout_ION_F"]; //Black, not ION livery
-["vehiclesHelisAttack", ["EF_B_AH99J_MJTF_Des"]] call _fnc_saveToTemplate;
+private _vehiclesHelisAttack = ["EF_B_AH99J_MJTF_Des"];
 
 ["vehiclesArtillery", ["B_T_MBT_01_mlrs_F"]] call _fnc_saveToTemplate; //this line determines artillery vehicles -- Example: ["vehiclesArtillery", ["B_MBT_01_arty_F"]] -- Array, can contain multiple assets
 //new magazines storing methode, all vehicle magazines should be defined here in format [Vehicle class, [magazines]],
@@ -94,14 +94,13 @@ if ("orange" in A3A_enabledDLC) then {
 };
 if ("rf" in A3A_enabledDLC) then {
     _vehiclesPolice append ["a3a_police_Pickup_rf", "B_GEN_Pickup_covered_rf", "a3a_police_Pickup_comms_rf"];
-    _HelisTransport append ["B_Heli_EC_04_military_RF"];
-    _vehiclesHelisLight = ["B_Heli_light_03_unarmed_RF"];
-    _vehiclesHelisLightAttack = ["a3a_Heli_light_03_dynamicLoadout_rf","B_Heli_EC_03_RF"];
-    _vehiclesMilitiaCars append ["B_Pickup_rf"];
-    _vehiclesMilitiaLightArmed append ["B_Pickup_mmg_rf"];
+    _vehiclesHelisLight = ["a3a_navy_Heli_light_03_unarmed_rf"];
+    _HelisTransport append ["a3a_navy_Heli_EC_04_military_rf"];
+    _vehiclesHelisLightAttack = ["a3a_navy_Heli_light_03_dynamicLoadout_rf","a3a_navy_Heli_EC_03_rf"];
+    _vehiclesHelisAttack append ["a3a_navy_Heli_EC_02_rf"];
+    _vehiclesMilitiaCars append ["B_T_Pickup_rf"];
+    _vehiclesMilitiaLightArmed append ["B_T_Pickup_mmg_rf"];
 };
-["vehiclesHelisLight", _vehiclesHelisLight] call _fnc_saveToTemplate;
-["vehiclesHelisLightAttack", _vehiclesHelisLightAttack] call _fnc_saveToTemplate;
 ["vehiclesPolice", _vehiclesPolice] call _fnc_saveToTemplate;
 
 ["vehiclesLightUnarmed", _LightUnarmed] call _fnc_saveToTemplate;
@@ -110,7 +109,10 @@ if ("rf" in A3A_enabledDLC) then {
 ["vehiclesAPCs", _APCs] call _fnc_saveToTemplate;
 ["vehiclesTanks", _Tanks] call _fnc_saveToTemplate;
 
+["vehiclesHelisLight", _vehiclesHelisLight] call _fnc_saveToTemplate;
 ["vehiclesHelisTransport", _HelisTransport] call _fnc_saveToTemplate;
+["vehiclesHelisLightAttack", _vehiclesHelisLightAttack] call _fnc_saveToTemplate;
+["vehiclesHelisAttack", _vehiclesHelisAttack] call _fnc_saveToTemplate;
 
 ["vehiclesMilitiaCars", _vehiclesMilitiaCars] call _fnc_saveToTemplate;
 ["vehiclesMilitiaLightArmed", _vehiclesMilitiaLightArmed] call _fnc_saveToTemplate;
