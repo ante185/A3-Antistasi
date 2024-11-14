@@ -516,11 +516,11 @@ if ("rf" in A3A_enabledDLC) then {
     ["SMG_01_black_RF", "", "acc_flashlight_smg_01", "optic_Aco_smg", [], [], ""]
     ];
     (_sfLoadoutData get "helmets") append [
-    "H_HelmetB_plain_sb_mtp_RF",
+    "H_HelmetB_plain_sb_khaki_RF",
     "H_HelmetHeavy_Sand_RF",
     "H_HelmetHeavy_Simple_Sand_RF",
     "H_HelmetHeavy_VisorUp_Sand_RF"];
-    (_militaryLoadoutData get "helmets") append ["H_HelmetB_plain_sb_mtp_RF"];
+    (_militaryLoadoutData get "helmets") append ["H_HelmetB_plain_sb_khaki_RF"];
 };
 
 /////////////////////////////////
