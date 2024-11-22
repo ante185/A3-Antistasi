@@ -118,7 +118,9 @@ class CfgVehicles
         textureList[] = {};
         hiddenSelectionstextures[] = {"\lxRF\vehicles_rf\pickup_01\Data\pickup_01_ext_gendarmerie_co.paa","\lxRF\vehicles_rf\pickup_01\Data\pickup_01_adds_gendarmerie_co.paa","\lxrf\vehicles_rf\pickup_01\data\pickup_01_ext2_co.paa","\lxrf\vehicles_rf\pickup_01\data\pickup_01_AAT_olive_co.paa","\lxrf\vehicles_rf\pickup_01\data\pickup_01_Launcher_black_co.paa","\lxRF\vehicles_rf\pickup_01\Data\pickup_01_service_gendarmerie_co.paa"};
     };
-    class a3a_Heli_light_03_dynamicLoadout_rf : B_Heli_light_03_dynamicLoadout_rf {};
+    class a3a_Heli_light_03_dynamicLoadout_rf : B_Heli_light_03_dynamicLoadout_rf {
+		class EventHandlers;
+    };
     class a3a_AAF_Heli_light_03_dynamicLoadout_rf : a3a_Heli_light_03_dynamicLoadout_rf {
         textureList[] = {};
         hiddenSelectionsTextures[] = {"\A3\Air_F_EPB\Heli_Light_03\data\Heli_Light_03_base_INDP_CO.paa","\lxRF\air_rf\Heli_Light_03\data\wildcat_addons_INDP_co.paa"};
