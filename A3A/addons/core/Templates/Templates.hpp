@@ -254,7 +254,7 @@ class Templates
 	
     class EF_Base : Vanilla_Base
     {
-        requiredAddons[] = {};
+        requiredAddons[] = {"EF_Data"};
         logo = "\ef\ef_data\logos\arma3_ef_logo_ca.paa";
         basepath = QPATHTOFOLDER(Templates\Templates\EF); //the path to the template folder
         priority = 5;
