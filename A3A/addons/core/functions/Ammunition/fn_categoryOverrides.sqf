@@ -465,8 +465,60 @@ private _categoryOverrideTable = [
 ["SPE_K98_Late_GW", ["Rifles","Weapons","GrenadeLaunchers"]],
 ["SPE_M1903A3_Springfield_M1_GL", ["Rifles","Weapons","GrenadeLaunchers"]],
 ["SPE_M1_Carbine_M8", ["Rifles","Weapons","GrenadeLaunchers"]],
-["SPE_M1_Garand_M7", ["Rifles","Weapons","GrenadeLaunchers"]] 
+["SPE_M1_Garand_M7", ["Rifles","Weapons","GrenadeLaunchers"]],
 
+//East Asia War
+["EAW_Type30", ["Unknown","Weapons"]],
+["EAW_Type95", ["Unknown","Weapons"]],
+["EAW_Dao", ["Unknown","Weapons"]],
+["EAW_Hanyang_Bayonet", ["Unknown","Weapons"]],
+
+["EAW_Type11_Base",["MachineGuns","Weapons"]],
+["EAW_Type96",["MachineGuns","Weapons"]],
+["EAW_Type99",["MachineGuns","Weapons"]],
+["EAW_FN30_Base",["MachineGuns","Weapons"]],
+["EAW_ZB26_Base",["MachineGuns","Weapons"]],
+
+["EAW_C96_Carbine",["SMGs","Weapons"]],
+["EAW_C96_Auto_Carbine",["SMGs","Weapons"]],
+["EAW_MP28",["SMGs","Weapons"]],
+
+["EAW_Type97_Sniper",["SniperRifles","Weapons"]],
+["EAW_Type97_Sniper_Stock2",["SniperRifles","Weapons"]],
+
+//WebKnight Melee
+["Pipe_aluminium", ["Unknown","Weapons"]],
+["WBK_axe", ["Unknown","Weapons"]],
+["Bat_Clear", ["Unknown","Weapons"]],
+["Bat_Spike", ["Unknown","Weapons"]],
+["WBK_BrassKnuckles", ["Unknown","Weapons"]],
+["WBK_brush_axe", ["Unknown","Weapons"]],
+["WBK_craftedAxe", ["Unknown","Weapons"]],
+["Crowbar", ["Unknown","Weapons"]],
+["CrudeAxe", ["Unknown","Weapons"]],
+["FireAxe", ["Unknown","Weapons"]],
+["WBK_survival_weapon_1", ["Unknown","Weapons"]],
+["WBK_survival_weapon_2", ["Unknown","Weapons"]],
+["IceAxe", ["Unknown","Weapons"]],
+["WBK_Katana", ["Unknown","Weapons"]],
+["Weap_melee_knife", ["Unknown","Weapons"]],
+["Knife_kukri", ["Unknown","Weapons"]],
+["Knife_m3", ["Unknown","Weapons"]],
+["WBK_pipeStyledSword", ["Unknown","Weapons"]],
+["Police_Bat", ["Unknown","Weapons"]],
+["Rod", ["Unknown","Weapons"]],
+["Sashka_Russian", ["Unknown","Weapons"]],
+["Shovel_Russian", ["Unknown","Weapons"]],
+["Shovel_Russian_Rotated", ["Unknown","Weapons"]],
+["Axe", ["Unknown","Weapons"]],
+["WBK_SmallHammer", ["Unknown","Weapons"]],
+["WBK_ww1_Club", ["Unknown","Weapons"]],
+["UNSC_Knife", ["Unknown","Weapons"]],
+["UNSC_Knife_reversed", ["Unknown","Weapons"]],
+["WBK_survival_weapon_4", ["Unknown","Weapons"]],
+["WBK_survival_weapon_4_r", ["Unknown","Weapons"]],
+["WBK_survival_weapon_3", ["Unknown","Weapons"]],
+["WBK_survival_weapon_3_r", ["Unknown","Weapons"]]
 ];
 
 
