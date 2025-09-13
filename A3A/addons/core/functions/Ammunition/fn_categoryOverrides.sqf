@@ -501,7 +501,7 @@ private _categoryOverrideTable = [
 
 // SFP
 ["sfp_flashlight", ["Unknown", "Weapons"]],
-["sfp_imgint_1010", ["Unknown", "Weapons"]]
+["sfp_imgint_1010", ["Unknown", "Weapons"]],
 
 //East Asia War
 ["EAW_Type30", ["Melee","Weapons"]],
