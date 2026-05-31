@@ -1814,6 +1814,18 @@ class Templates
         shortName = "EAW CIV";
         lore = "East Asian Civilians";
     };
+    // ***************************** WW1 *****************************
+
+    class WW1_Base : IFA_Base
+    {
+        requiredAddons[] = {"IFA3_Core", "WWI_weapons", "sab_flyingcircus"};
+        basepath = QPATHTOFOLDER(Templates\Templates\WW1);
+        logo = ""; //Can't figure out how to path to the logo at the base of the IFA AiO mod??
+        priority = 71;
+        equipFlags[] = {"lowTech"};
+        //climate[] = {"temperate","tropical"};
+        forceDLC[] = {};
+    };
     // ***************************** SPE with IFA *****************************
 
     class SPE_IFA_Base
