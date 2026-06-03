@@ -1820,11 +1820,45 @@ class Templates
     {
         requiredAddons[] = {"IFA3_Core", "WWI_weapons", "sab_flyingcircus"};
         basepath = QPATHTOFOLDER(Templates\Templates\WW1);
-        logo = ""; //Can't figure out how to path to the logo at the base of the IFA AiO mod??
-        priority = 71;
+        logo = ""; 
+        priority = 75;
         equipFlags[] = {"lowTech"};
         //climate[] = {"temperate","tropical"};
         forceDLC[] = {};
+    };
+    class WW1_Entente : WW1_Base
+    {
+        side = "Occ";
+        flagTexture = "\x\A3A\addons\core\Pictures\Flags\ifa_fr.paa";
+        name = "WW1 Triple Entente";
+        file = "WW1_AI_Entente";
+        shortName = "Entente";
+        lore = "https://en.wikipedia.org/wiki/Triple_Entente";
+    };
+    class WW1_Empire : WW1_Base
+    {
+        side = "Inv";
+        flagTexture = "\A3\ui_f\data\map\markers\flags\Germany_ca.paa";
+        name = "WW1 German Empire";
+        file = "WW1_AI_Empire";
+        shortName = "Empire";
+        lore = "https://en.wikipedia.org/wiki/German_Empire";
+    };
+    class WW1_Reb : WW1_Entente
+    {
+        side = "Reb";
+        name = "WW1 Mutineers";
+        file = "WW1_REB_MUTINEERS";
+        shortName = "Mutineers";
+        lore = "Tired of fighting one another, these warriors fight for what they deem moral";
+    };
+    class WW1_Civ : WW1_Entente
+    {
+        side = "Civ";
+        name = "WW1 Civilians";
+        file = "WW1_CIV_FR";
+        shortName = "Civilians";
+        lore = "";
     };
     // ***************************** SPE with IFA *****************************
 
