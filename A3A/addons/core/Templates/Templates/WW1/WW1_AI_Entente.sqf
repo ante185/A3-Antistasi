@@ -12,7 +12,6 @@
 //////////////////////////
 //       Vehicles       //
 //////////////////////////
-["attributeMoreTrucks", true] call _fnc_saveToTemplate;         // Use more truck for transports
 
 ["ammobox", "B_supplyCrate_F"] call _fnc_saveToTemplate;
 ["surrenderCrate", "Box_IND_Wps_F"] call _fnc_saveToTemplate; //Changeing this from default will require you to define logistics attachement offset for the box type
@@ -23,12 +22,12 @@
 ["vehiclesLightUnarmed", ["fiat15_ter"]] call _fnc_saveToTemplate;
 ["vehiclesLightArmed", ["peugeot_1914", "lancia_1z", "lancia_1zM"]] call _fnc_saveToTemplate;             // Should be armed, unarmoured to lightly armoured, with 0-4 passengers
 ["vehiclesTrucks", ["fiat15_ter"]] call _fnc_saveToTemplate;
-["vehiclesCargoTrucks", ["fiat15_ter_decapote", "LIB_Zis5v"]] call _fnc_saveToTemplate;
+["vehiclesCargoTrucks", ["fiat15_ter_decapote"]] call _fnc_saveToTemplate;
 ["vehiclesAmmoTrucks", ["LIB_US6_Ammo"]] call _fnc_saveToTemplate;
 ["vehiclesRepairTrucks", ["LIB_Zis6_Parm"]] call _fnc_saveToTemplate;
 ["vehiclesFuelTrucks", ["LIB_Zis5v_Fuel"]] call _fnc_saveToTemplate;
 ["vehiclesMedical", ["fiat15_ter_amb"]] call _fnc_saveToTemplate;
-["vehiclesLightAPCs", ["fiat15_ter"]] call _fnc_saveToTemplate;             // armed, lightly armoured, with 6-8 passengers 
+["vehiclesLightAPCs", []] call _fnc_saveToTemplate;             // armed, lightly armoured, with 6-8 passengers 
 ["vehiclesAPCs", []] call _fnc_saveToTemplate;                  // armed with enclosed turret, armoured, with 6-8 passengers
 ["vehiclesIFVs", []] call _fnc_saveToTemplate;                  // capable of surviving multiple rockets, cannon armed, with 6-8 passengers
 ["vehiclesLightTanks", ["wwi_ft17_37mm_girod", "wwi_ft17_2018", "wwi_ft17_75BS", "wwi_ft17_8mm_girod"]] call _fnc_saveToTemplate;

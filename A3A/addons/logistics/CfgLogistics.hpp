@@ -30,6 +30,7 @@ class DOUBLES(ADDON,Nodes)
     #include "Nodes\Vanilla.hpp"
     #include "Nodes\VN.hpp"
     #include "Nodes\WS.hpp"
+    #include "Nodes\WW1.hpp"
 };
 
 class DOUBLES(ADDON,Cargo)
@@ -57,6 +58,7 @@ class DOUBLES(ADDON,Cargo)
     #include "Cargo\Vanilla.hpp"
     #include "Cargo\VN.hpp"
     #include "Cargo\WS.hpp"
+    #include "Cargo\WW1.hpp"
 };
 
 class DOUBLES(ADDON,Packable) {
