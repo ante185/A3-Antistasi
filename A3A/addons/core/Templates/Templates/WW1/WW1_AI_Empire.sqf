@@ -76,6 +76,9 @@
 ["mortarMagazineHE", "LIB_8Rnd_81mmHE_GRWR34"] call _fnc_saveToTemplate;
 ["mortarMagazineSmoke", "LIB_81mm_GRWR34_SmokeShell"] call _fnc_saveToTemplate;
 
+["vehiclesSAM", []] call _fnc_saveToTemplate;
+["vehiclesRadar", []] call _fnc_saveToTemplate;
+
 //Minefield definition
 //CFGVehicles variant of Mines are needed "ATMine", "APERSTripMine", "APERSMine"
 ["minefieldAT", ["LIB_TMI_42_MINE"]] call _fnc_saveToTemplate;
