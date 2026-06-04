@@ -116,7 +116,7 @@ _loadoutData set ["lightExplosives", ["LIB_Ladung_Small_MINE_mag"]];
 _loadoutData set ["heavyExplosives", ["LIB_Ladung_Big_MINE_mag"]];
 
 _loadoutData set ["antiTankGrenades", ["LIB_Shg24x7"]];
-_loadoutData set ["antiInfantryGrenades", ["LIB_F1"]];
+_loadoutData set ["antiInfantryGrenades", ["LIB_Shg24"]];
 _loadoutData set ["smokeGrenades", ["SmokeShell"]];
 _loadoutData set ["signalsmokeGrenades", ["SmokeShellRed"]];
 
