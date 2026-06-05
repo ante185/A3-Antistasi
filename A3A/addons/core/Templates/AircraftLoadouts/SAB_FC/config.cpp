@@ -99,3 +99,17 @@ class A3A {
         };
     };
 };
+
+class CfgVehicles{
+    class Plane_Base_F;
+    class sab_fc_baseplane : Plane_Base_F {
+        class EventHandlers;
+    };
+    class sab_zeppelin_base : sab_fc_baseplane {
+        class EventHandlers : EventHandlers {
+            GetIn ="params [""_vehicle"", ""_role"", ""_unit"", ""_turret""];    if (backpack _unit != ""B_LIB_US_TypeA3"") exitWith {};    if (_role == ""driver"") exitWith {};    if !(typeOf _unit == ""a3a_unit_west"" or typeOf _unit == ""a3a_unit_east"") exitWith {};     [_unit] spawn {params [""_unit""];  waitUntil { sleep 5 + random 1; not (_unit checkAIFeature ""AUTOTARGET"" or _unit checkAIFeature ""TARGET"" ) };  _unit enableAIFeature [""AUTOTARGET"", true];    _unit enableAIFeature [""TARGET"", true];}; removeAllWeapons _unit;    private _entente = [""wwi_lebel_scoped"", ""wwi_chauchat"", ""wwi_lewis_mg""];    private _empire = [""wwi_g98iv"", ""wwi_mp18"", ""wwi_LMG0815""];    private _index = floor random 3;    private _weapon = """";       if (A3A_faction_occ get ""name"" == ""Entente"") then { _weapon = ([_empire, _entente] select (side _unit == west)) select _index} else { _weapon = ([_entente, _empire] select (side _unit == west)) select _index};            _unit addMagazines [compatibleMagazines _weapon select 0, 6 - (2 * _index)];    _unit addWeapon _weapon;    ";
+        };
+    };
+
+};
+//if (A3A_faction_occ get ""name"" == ""Entente"") then { _weapon = ([_empire, _entente] select (side _unit == west)) select _index} else { _weapon = ([_entente, _empire] select (side _unit == west)) select _index};

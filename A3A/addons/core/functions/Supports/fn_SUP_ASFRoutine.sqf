@@ -22,11 +22,12 @@ _suppData params ["_supportName", "_side", "_suppType", "_suppCenter", "_suppRad
 //Sleep to simulate preparation time
 sleep _sleepTime;
 
-private _spawnPos = (markerPos _airport);
+private _spawnPos = (markerPos _airport) getPos [200, random 360];
 private _plane = createVehicle [_planeType, _spawnPos, [], 0, "FLY"];
+private _maxSpeed = getNumber(configOf _plane >> "maxSpeed");
 _plane setDir (_spawnPos getDir _suppCenter);
 _plane setPosATL (_spawnPos vectorAdd [0, 0, 1000]);
-_plane setVelocityModelSpace [0, 150, 0];
+_plane setVelocityModelSpace [0, 0.4*_maxSpeed min 150, 0];
 _plane flyInHeight 1000;
 [_plane, _side, _resPool] call A3A_fnc_AIVehInit;
 _plane setVariable ["SupportData", _suppData];        // for use in EHs
@@ -46,6 +47,7 @@ _plane addEventHandler ["Killed", {
 while {count waypoints _group > 0} do { deleteWaypoint [_group, 0] };
 private _loiterWP = _group addWaypoint [_suppCenter, 0];
 _loiterWP setWaypointSpeed "NORMAL";
+if (_maxSpeed < 220) then {_loiterWP setWaypointSpeed "FULL"};
 _loiterWP setWaypointType "Loiter";
 _loiterWP setWaypointLoiterRadius 2000;
 _loiterWP setWaypointLoiterAltitude 700;
@@ -137,6 +139,7 @@ if (canMove _plane && {[driver _plane] call A3A_fnc_canFight}) then
     while {count waypoints _group > 0} do { deleteWaypoint [_group, 0] };
     private _wpBase = _group addWaypoint [_spawnPos, 0];
     _wpBase setWaypointSpeed "NORMAL";
+    if (_maxSpeed < 220) then {_wpBase setWaypointSpeed "FULL"};
     _wpBase setWaypointBehaviour "CARELESS";
     _group setCurrentWaypoint _wpBase;
 

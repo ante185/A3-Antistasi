@@ -225,8 +225,6 @@ _pilotLoadoutData set ["vests", []];
 _pilotLoadoutData set ["helmets", []];
 _pilotLoadoutData set ["backpacks", ["B_LIB_US_TypeA3"]];
 
-_pilotLoadoutData set ["rifles", ["wwi_g98iii"]];
-
 
 /////////////////////////////////
 //    Unit Type Definitions    //
@@ -575,9 +573,7 @@ private _pilotTemplate = {
     ["facewear"] call _fnc_setFacewear;
     ["vests"] call _fnc_setVest;
     ["uniforms"] call _fnc_setUniform;
-
-    ["rifles"] call _fnc_setPrimary;
-    ["primary", 1] call _fnc_addMagazines;
+    ["backpacks"] call _fnc_setBackpack;
 
     ["sidearms"] call _fnc_setHandgun;
     ["handgun", 4] call _fnc_addMagazines;

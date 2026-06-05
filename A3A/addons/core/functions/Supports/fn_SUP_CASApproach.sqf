@@ -17,6 +17,7 @@ Debug_1("CASApproach called with %1", _this);
 
 params ["_suppData", "_plane", "_group", "_reveal"];
 _suppData params ["_supportName", "_side", "_suppType", "_suppCenter", "_suppRadius", "_suppTarget"];
+private _maxSpeed = getNumber(configOf _plane >> "maxSpeed");
 
 //Get available ammo count of all allowed propelled weapons
 private _ammoHM = createHashMap;
@@ -118,7 +119,7 @@ private _firedEH = _plane addEventHandler ["Fired", {
     if(_weapon in (_plane getVariable ["rocketLauncher", []])) exitWith
     {
         //Unguided rocket, wait until thrust is complete before fixing accuracy
-        //Thrust seems to give terrible vertical accuracy for some reason, maybe busted simulation
+        //Thrust seems to give terrible vertical accuracy for some reason, maybe busted simulation : Is the linear thrust decrease after the first 25% of thrust time accounted for?
         [time, _projectile, _targetObj, _ammo, _fnc_ballisticCorrection] spawn {
             params ["_startTime", "_projectile", "_targetObj", "_ammo", "_fnc_ballisticCorrection"];
             private _thrustTime = getNumber (configFile >> "cfgAmmo" >> _ammo >> "thrustTime");
@@ -172,9 +173,11 @@ private _firedEH = _plane addEventHandler ["Fired", {
 while {count waypoints _group > 0} do { deleteWaypoint [_group, 0] };
 private _setupWP = _group addWaypoint [_suppCenter, 0];
 _setupWP setWaypointSpeed "NORMAL";
+if (_maxSpeed < 220) then {_setupWP setWaypointSpeed "FULL"}; //If slow try and go faster
 
 private _loiterWP = _group addWaypoint [_suppCenter, 0];
 _loiterWP setWaypointSpeed "NORMAL";
+if (_maxSpeed < 220) then {_loiterWP setWaypointSpeed "FULL"};
 _loiterWP setWaypointType "Loiter";
 _loiterWP setWaypointLoiterRadius DIST_REPOS;
 _loiterWP setWaypointLoiterAltitude ALT_REPOS;
