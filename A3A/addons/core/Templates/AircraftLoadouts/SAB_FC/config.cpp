@@ -112,4 +112,3 @@ class CfgVehicles{
     };
 
 };
-//if (A3A_faction_occ get ""name"" == ""Entente"") then { _weapon = ([_empire, _entente] select (side _unit == west)) select _index} else { _weapon = ([_entente, _empire] select (side _unit == west)) select _index};
