@@ -48,15 +48,15 @@ civTraffic = 1; A3A_enemyResponseTime = 2;
 ["vehiclesCivBoat", []] call _fnc_saveToTemplate;
 ["vehiclesCivPlane", []] call _fnc_saveToTemplate;
 
-["staticMGs", ["wwi_hotckiss_mg_AA"]] call _fnc_saveToTemplate;
+["staticMGs", ["wwi_hotckiss_mg_AA","sab_pup"]] call _fnc_saveToTemplate;
 ["staticAT", ["37mm_tak"]] call _fnc_saveToTemplate;
-["staticAA", []] call _fnc_saveToTemplate;
+["staticAA", ["wwi_lmg1914_aa"]] call _fnc_saveToTemplate;
 ["staticMortars", ["LIB_M2_60"]] call _fnc_saveToTemplate;
 ["staticMortarMagHE", "LIB_8Rnd_60mmHE_M2"] call _fnc_saveToTemplate;
 ["staticMortarMagSmoke", ""] call _fnc_saveToTemplate;
 
-["mineAT", ""] call _fnc_saveToTemplate;
-["mineAPERS", ""] call _fnc_saveToTemplate;
+["mineAT", "LIB_TMI_42_MINE_mag"] call _fnc_saveToTemplate;
+["mineAPERS", "LIB_STMI_MINE_mag"] call _fnc_saveToTemplate;
 
 ["breachingExplosivesAPC", [["LIB_Ladung_Big_MINE_mag", 1], ["LIB_Ladung_Small_MINE_mag", 1]]] call _fnc_saveToTemplate;
 ["breachingExplosivesTank", [["LIB_US_TNT_4pound_mag", 1], ["LIB_Ladung_Big_MINE_mag", 2]]] call _fnc_saveToTemplate;
@@ -67,7 +67,7 @@ civTraffic = 1; A3A_enemyResponseTime = 2;
 ///////////////////////////
 
 private _initialRebelEquipment = [
-"LIB_M1895", "LIB_7Rnd_762x38",
+"a3a_LIB_LeeEnfield_410", "a3a_1Rnd_410_Pellets", "a3a_1Rnd_410_Slug",
 "LIB_FLARE_PISTOL", "LIB_1Rnd_flare_white",
 "V_LIB_SOV_RA_Belt", 
 ["LIB_Ladung_Small_MINE_mag", 10],

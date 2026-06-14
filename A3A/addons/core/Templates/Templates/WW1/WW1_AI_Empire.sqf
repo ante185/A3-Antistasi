@@ -108,9 +108,9 @@ _loadoutData set ["machineGuns", ["wwi_LMG0815"]];
 _loadoutData set ["marksmanRifles", ["wwi_g98i"]];
 _loadoutData set ["sniperRifles", ["wwi_g98ii"]];
 
-_loadoutData set ["lightATLaunchers", []];
-_loadoutData set ["ATLaunchers", []];
-_loadoutData set ["missileATLaunchers", []];
+_loadoutData set ["ATWeapon", [
+    ["a3a_LIB_wwi_antitank", "", "", "", ["a3a_1Rnd_13mm_AP","a3a_1Rnd_13mm_Ball","a3a_1Rnd_13mm_AP","a3a_1Rnd_13mm_Ball","a3a_1Rnd_13mm_APHE","a3a_1Rnd_13mm_HE"], [], ""]]
+    ];
 _loadoutData set ["AALaunchers", []];
 _loadoutData set ["sidearms", ["wwi_m1896", "wwi_m1896", "wwi_p08", "wwi_p08", "wwi_lp08"]];
 
@@ -415,8 +415,11 @@ private _atTemplate = {
     ["uniforms"] call _fnc_setUniform;
     ["backpacks"] call _fnc_setBackpack;
 
-    ["carbines"] call _fnc_setPrimary;
-    ["primary", 5] call _fnc_addMagazines;
+    ["ATWeapon"] call _fnc_setPrimary;
+    ["primary", 15] call _fnc_addMagazines;
+    
+    ["sidearms"] call _fnc_setHandgun;
+    ["handgun", 2] call _fnc_addMagazines;
 
     ["items_medical_standard"] call _fnc_addItemSet;
     ["items_at_extras"] call _fnc_addItemSet;
