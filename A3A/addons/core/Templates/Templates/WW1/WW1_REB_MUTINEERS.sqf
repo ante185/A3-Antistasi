@@ -29,7 +29,7 @@ civTraffic = 1; A3A_enemyResponseTime = 2;
 //       Vehicles       //
 //////////////////////////
 
-["vehiclesBasic", ["Cadillac1903_4seat", "peugeot_500cc"]] call _fnc_saveToTemplate;
+["vehiclesBasic", ["Cadillac1903_4seat"]] call _fnc_saveToTemplate;
 ["vehiclesLightUnarmed", ["Renault_AG_1910_Red"]] call _fnc_saveToTemplate;
 ["vehiclesLightArmed", ["peugeot_1914"]] call _fnc_saveToTemplate;  //replace with a version in plain green
 ["vehiclesTruck", ["Daimler_marienfeld_benne"]] call _fnc_saveToTemplate;
@@ -38,7 +38,7 @@ civTraffic = 1; A3A_enemyResponseTime = 2;
 
 ["vehiclesBoat", ["LIB_UK_LCA"]] call _fnc_saveToTemplate;
 
-["vehiclesPlane", ["sab_brisfit"]] call _fnc_saveToTemplate;
+["vehiclesPlane", ["sab_brisfit","sab_pup"]] call _fnc_saveToTemplate;
 ["vehiclesMedical", ["LIB_Zis5v_Med"]] call _fnc_saveToTemplate;
 
 
@@ -48,7 +48,7 @@ civTraffic = 1; A3A_enemyResponseTime = 2;
 ["vehiclesCivBoat", []] call _fnc_saveToTemplate;
 ["vehiclesCivPlane", []] call _fnc_saveToTemplate;
 
-["staticMGs", ["wwi_hotckiss_mg_AA","sab_pup"]] call _fnc_saveToTemplate;
+["staticMGs", ["wwi_hotckiss_mg_AA"]] call _fnc_saveToTemplate;
 ["staticAT", ["37mm_tak"]] call _fnc_saveToTemplate;
 ["staticAA", ["wwi_lmg1914_aa"]] call _fnc_saveToTemplate;
 ["staticMortars", ["LIB_M2_60"]] call _fnc_saveToTemplate;
@@ -67,14 +67,14 @@ civTraffic = 1; A3A_enemyResponseTime = 2;
 ///////////////////////////
 
 private _initialRebelEquipment = [
-"a3a_LIB_LeeEnfield_410", "a3a_1Rnd_410_Pellets", "a3a_1Rnd_410_Slug",
+"a3a_wwi_enfield_410", "a3a_1Rnd_410_Pellets", "a3a_1Rnd_410_Slug",
 "LIB_FLARE_PISTOL", "LIB_1Rnd_flare_white",
 "V_LIB_SOV_RA_Belt", 
 ["LIB_Ladung_Small_MINE_mag", 10],
-"B_LIB_DAK_A_frame",
-"LIB_Binocular_GER",
-["B_LIB_GER_Tonister34_cowhide", 3],
-["B_LIB_GER_MedicBackpack_Empty", 3]
+["LIB_TMI_42_MINE_mag", 2],
+["LIB_STMI_MINE_mag", 2],
+"wwi_fr_bag_sacoche",
+"LIB_Binocular_GER"
 ];
 
 if (A3A_hasTFAR) then {_initialRebelEquipment append ["tf_microdagr","tf_anprc154"]};

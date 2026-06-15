@@ -21,7 +21,7 @@ class cfgAmmo {
     class LIB_B_20x110_AP;
     class LIB_B_20x110_AA;
     class a3a_LIB_20mmMixed : LIB_B_20x110_AP{
-        submunitionAmmo[] = {"LIB_B_20x110_AP",1,"LIB_B_20x110_AA",0.5};
+        submunitionAmmo[] = {"LIB_B_20x110_AP",0.7,"LIB_B_20x110_AA",0.5};
         submunitionConeAngle = 0;
         submunitionConeAngleHorizontal = 0;
         triggerTime = 0.0001;
@@ -94,6 +94,7 @@ class CfgMagazines {
         ammo = "a3a_LIB_20mmMixed";
         count = 11;
         displayName = "20mm HE/AP Mix";
+        displayNameShort = "HE/AP";
         maxLeadSpeed = 60;
         tracersEvery=1;
     };
@@ -101,17 +102,19 @@ class CfgMagazines {
     class a3a_1Rnd_410_Pellets : 2Rnd_12Gauge_Pellets {
         modelSpecial = "";
         displayName = "1Rnd .410 #00 Buck"
-        descriptionShort = ".410 Pellets for police and civilian use";
+        descriptionShort = ".410 Pellets for hunting";
         ammo = "a3a_410_Submunition";
         count = 1;
+        mass = 2;
     }
     class 2Rnd_12Gauge_Slug;
     class a3a_1Rnd_410_Slug : 2Rnd_12Gauge_Slug {
         modelSpecial = "";
         displayName = "1Rnd .410 Slug"
-        descriptionShort = ".410 Slug for police and civilian use";
+        descriptionShort = ".410 Slug for hunting";
         ammo = "a3a_410_Slug";
         count = 1;
+        mass = 2;
     };
     class LIB_1Rnd_145x114;
     class a3a_1Rnd_13mm_AP : LIB_1Rnd_145x114 {
@@ -182,6 +185,7 @@ class CfgWeapons {
         displayName = "LeeEnfield .410 Smoothbore"
         descriptionShort = "Lee-Enfield No.1 Mk III converted to a single shot shotgun";
         drySound[] = {"A3\Sounds_F_Enoch\Assets\Arsenal\HunterShotgun_01\HunterShotgun_01_Shot_Dry_01",0.501187,1,10};
+        reloadMagazineSound[] = {"\WW2\Assets_s\Weapons\Rifles_s\BoltAction\Reload_1clip.wss",1,1,10};
         recoil = "recoil_huntershotgun_01";
         discreteDistance[] = {91.44};
         discreteDistanceInitIndex = 0;
