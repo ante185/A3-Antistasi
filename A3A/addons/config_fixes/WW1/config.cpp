@@ -21,6 +21,7 @@ class cfgAmmo {
     class LIB_B_20x110_AP;
     class LIB_B_20x110_AA;
     class a3a_LIB_20mmMixed : LIB_B_20x110_AP{
+        aiAmmoUsageFlags = "64 + 128 + 256 + 512";
         submunitionAmmo[] = {"LIB_B_20x110_AP",0.7,"LIB_B_20x110_AA",0.5};
         submunitionConeAngle = 0;
         submunitionConeAngleHorizontal = 0;
@@ -39,12 +40,15 @@ class cfgAmmo {
     class LIB_B_145x144_Ball;
     class a3a_13mm_HE : LIB_B_145x144_Ball{
         aiAmmoUsageFlags = "64 + 128 + 256";
+        aiAmmoUsageFlagsStrict = 0;
+        airLock = true;
         explosionEffects = "LIB_ImpactMetal";
         craterEffects = "LIB_ImpactMetal";
-        explosive = 0.8;
+        explosive = 0.6;
         hit = 12;
         indirectHit = 0.5;
         indirectHitRange = 5;
+        cost = 3;
     };
     class a3a_13mm_HE_Submunition : a3a_13mm_HE{
         hit = 6;
@@ -53,20 +57,29 @@ class cfgAmmo {
         explosionTime = 0.03;
     };
     class a3a_13mm_AP : LIB_B_145x144_Ball{
+        aiAmmoUsageFlagsStrict = 0;
         aiAmmoUsageFlags = "64 + 128 + 256 + 512";
+        airLock = true;
         hit = 18;
-        caliber = "(70 /((15 * 1114)/1000))";
+        caliber = "(90 /((15 * 1114)/1000))";
+        cost = 7;
     };
     class a3a_13mm_Ball : LIB_B_145x144_Ball{
+        aiAmmoUsageFlagsStrict = 0;
         aiAmmoUsageFlags = "64 + 128 + 256";
+        airLock = true;
         craterEffects = "LIB_Impact_Flame";
         hit = 12;
-        caliber = "(35 /((15 * 1114)/1000))";
+        caliber = "(55 /((15 * 1114)/1000))";
+        cost = 3;
     };
     class a3a_13mm_APHE : a3a_13mm_AP{
         aiAmmoUsageFlags = "64 + 128 + 256";
-        caliber = "(55 /((15 * 1114)/1000))";
+        aiAmmoUsageFlagsStrict = 0;
+        airLock = true;
+        caliber = "(75 /((15 * 1114)/1000))";
         craterEffects = "LIB_ImpactMetal";
+        explosive = 0.1;
         hit = 12;
         submunitionAmmo = "a3a_13mm_HE_Submunition";
         triggerOnImpact = true;
@@ -75,9 +88,12 @@ class cfgAmmo {
     };
     class a3a_13mm_mix : LIB_B_145x144_Ball{
         aiAmmoUsageFlags = "64 + 128 + 256 + 512";
-        submunitionAmmo[] = {"a3a_13mm_Ball",4,"a3a_13mm_HE",2,"a3a_13mm_AP",1,"a3a_13mm_APHE",1};
+        aiAmmoUsageFlagsStrict = 0;
+        airLock = true;
+        submunitionAmmo[] = {"a3a_13mm_Ball",1,"a3a_13mm_HE",2,"a3a_13mm_AP",1,"a3a_13mm_APHE",1};
         triggerTime  = 0.0001;
         deleteParentWhenTriggered = true;
+        cost = 5;
     };
 };
 
@@ -197,8 +213,10 @@ class CfgWeapons {
     class LIB_PTRD;
     class a3a_LIB_wwi_antitank : LIB_PTRD {
         displayName = "TAG 19";
-        descriptionShort = "13mm Tankabwehrgewehr, Simplified in 1919";
+        descriptionShort = "13mm Tankabwehrgewehr, Simplified Mod. 1919";
         magazines[] = {"a3a_1Rnd_13mm_AP","a3a_1Rnd_13mm_Ball","a3a_1Rnd_13mm_APHE","a3a_1Rnd_13mm_HE"};
+        maxLeadSpeed = 100;
+        maxRange = 700;
     };
 };
 
