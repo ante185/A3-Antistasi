@@ -27,7 +27,7 @@ private _plane = createVehicle [_planeType, _spawnPos, [], 0, "FLY"];
 private _maxSpeed = getNumber(configOf _plane >> "maxSpeed");
 _plane setDir (_spawnPos getDir _suppCenter);
 _plane setPosATL (_spawnPos vectorAdd [0, 0, 500]);
-_plane setVelocityModelSpace [0, (0.4*_maxSpeed) min 150, 0];
+_plane setVelocityModelSpace [0, (0.3*_maxSpeed) min 150, 0];
 _plane flyInHeight 500;
 [_plane, _side, _resPool] call A3A_fnc_AIVehInit;
 [_plane, "CAS"] call A3A_fnc_setPlaneLoadout;

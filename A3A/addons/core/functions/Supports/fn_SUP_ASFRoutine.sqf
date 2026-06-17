@@ -27,7 +27,7 @@ private _plane = createVehicle [_planeType, _spawnPos, [], 0, "FLY"];
 private _maxSpeed = getNumber(configOf _plane >> "maxSpeed");
 _plane setDir (_spawnPos getDir _suppCenter);
 _plane setPosATL (_spawnPos vectorAdd [0, 0, 1000]);
-_plane setVelocityModelSpace [0, 0.4*_maxSpeed min 150, 0];
+_plane setVelocityModelSpace [0, 0.3*_maxSpeed min 150, 0];
 _plane flyInHeight 1000;
 [_plane, _side, _resPool] call A3A_fnc_AIVehInit;
 _plane setVariable ["SupportData", _suppData];        // for use in EHs

@@ -34,6 +34,7 @@ private _targDir = _spawnPos getDir _targetPos;
 _plane setDir _targDir;
 _plane setPosATL _spawnPos;                                           // setPosATL kills velocity
 _plane setVelocityModelSpace [0, 100, 0];
+_plane setVelocityModelSpace [0, 0.3*_maxSpeed min 100, 0];
 [_plane, _side, _resPool] call A3A_fnc_AIVEHInit;
 
 private _group = [_side, _plane] call A3A_fnc_createVehicleCrew;
@@ -62,7 +63,7 @@ private _bombCount = [2, 3, 4] select (round random [1, _aggroValue / 50, 0]);
 if (_bombType == "HE") then {_bombCount = _bombCount * 2};
 private _bombParams = [_plane, _bombType, _bombCount, 200];
 private _flightSpeed = ["LIMITED", "NORMAL", "FULL"] select (round random [1, _aggroValue / 50, 0]);
-if (_isHelicopter) then {_flightSpeed = "FULL"};
+if (_isHelicopter or _maxSpeed < 220) then {_flightSpeed = "FULL"};
 Info_5("Airstrike %1 against %2 with %3 %4 bombs at %5 speed", _supportName, _targetPos, _bombCount, _bombType, toLower _flightSpeed);
 
 _plane flyInHeight 150;
