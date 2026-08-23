@@ -3,7 +3,6 @@
 //////////////////////////    
 ["vehiclesCivCar", [ 
     "Renault_AG_1910_Red", 7, 
-    "peugeot_500cc", 0,
     "Cadillac1903_4seat", 3.5, 
     "Cadillac1903_2seat", 3.5, 
     "Mercedes_race_1914", 3.5, 
