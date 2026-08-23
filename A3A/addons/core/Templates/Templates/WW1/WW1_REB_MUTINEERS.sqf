@@ -38,7 +38,7 @@ civTraffic = 1; A3A_enemyResponseTime = 2;
 
 ["vehiclesBoat", ["LIB_UK_LCA"]] call _fnc_saveToTemplate;
 
-["vehiclesPlane", ["sab_brisfit","sab_pup"]] call _fnc_saveToTemplate;
+["vehiclesPlane", ["sab_camel_i", "sab_brisfit"]] call _fnc_saveToTemplate;
 ["vehiclesMedical", ["LIB_Zis5v_Med"]] call _fnc_saveToTemplate;
 
 
